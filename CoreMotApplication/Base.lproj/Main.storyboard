@@ -126,6 +126,12 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="kM1-HY-5pa" firstAttribute="top" secondItem="S3G-vd-MV4" secondAttribute="bottom" id="HJZ-Uj-uMx"/>
+                                    <constraint firstItem="kM1-HY-5pa" firstAttribute="top" secondItem="S3G-vd-MV4" secondAttribute="bottom" id="Qa6-ns-4DA"/>
+                                    <constraint firstItem="S3G-vd-MV4" firstAttribute="top" secondItem="MLj-JF-gI7" secondAttribute="bottom" id="RuY-zM-TtQ"/>
+                                    <constraint firstItem="S3G-vd-MV4" firstAttribute="top" secondItem="MLj-JF-gI7" secondAttribute="bottom" id="TP8-N2-eTv"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
