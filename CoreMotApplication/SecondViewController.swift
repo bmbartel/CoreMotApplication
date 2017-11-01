@@ -20,17 +20,15 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    var buttonSelected = ""
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+
+        let destVC = segue.destination as! AccelerationTableViewController
         
+        let buttonSelected = segue.identifier
+        destVC.buttonSelected = buttonSelected.self!
         
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        if let destVC = segue.destination as? AccelerationTableViewController
-        {
-            destVC.buttonSelected = buttonSelected.self
-        }
         
     }
 }
