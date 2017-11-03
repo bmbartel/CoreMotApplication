@@ -91,11 +91,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pvQ-iV-G40">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="pvQ-iV-G40">
                                 <rect key="frame" x="161" y="182" width="68" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLj-JF-gI7">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLj-JF-gI7">
                                         <rect key="frame" x="0.0" y="0.0" width="68" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="X Accel">
@@ -105,7 +104,7 @@
                                             <segue destination="1vF-ex-t9a" kind="show" identifier="X Accel" id="FQu-4m-5mE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3G-vd-MV4">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3G-vd-MV4">
                                         <rect key="frame" x="0.0" y="36" width="68" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Y Accel">
@@ -115,7 +114,7 @@
                                             <segue destination="1vF-ex-t9a" kind="show" identifier="Y Accel" id="WC5-cr-K08"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kM1-HY-5pa">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kM1-HY-5pa">
                                         <rect key="frame" x="0.0" y="72" width="68" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Z Accel">
@@ -126,15 +125,13 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="kM1-HY-5pa" firstAttribute="top" secondItem="S3G-vd-MV4" secondAttribute="bottom" id="HJZ-Uj-uMx"/>
-                                    <constraint firstItem="kM1-HY-5pa" firstAttribute="top" secondItem="S3G-vd-MV4" secondAttribute="bottom" id="Qa6-ns-4DA"/>
-                                    <constraint firstItem="S3G-vd-MV4" firstAttribute="top" secondItem="MLj-JF-gI7" secondAttribute="bottom" id="RuY-zM-TtQ"/>
-                                    <constraint firstItem="S3G-vd-MV4" firstAttribute="top" secondItem="MLj-JF-gI7" secondAttribute="bottom" id="TP8-N2-eTv"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pvQ-iV-G40" firstAttribute="leading" secondItem="XDh-za-2Rn" secondAttribute="leading" constant="161" id="FfM-GR-kHQ"/>
+                            <constraint firstItem="pvQ-iV-G40" firstAttribute="top" secondItem="9XQ-ww-Q4h" secondAttribute="bottom" constant="118" id="xzf-nU-ZBI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Acceleration Type" id="nWz-RR-8EU"/>
                 </viewController>
@@ -188,6 +185,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FQu-4m-5mE"/>
+        <segue reference="yQc-ZH-K0v"/>
     </inferredMetricsTieBreakers>
 </document>
