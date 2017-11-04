@@ -184,10 +184,51 @@
                     <navigationItem key="navigationItem" title="Accelerations" id="gbl-Vu-RsF">
                         <barButtonItem key="backBarButtonItem" title="Back" id="D0t-s8-SZ3"/>
                     </navigationItem>
+                    <connections>
+                        <segue destination="7F6-rA-zuL" kind="show" identifier="MoreDetail" id="Ikd-FA-y6m"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34t-K5-P2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2546" y="493"/>
+            <point key="canvasLocation" x="2540" y="492"/>
+        </scene>
+        <!--Last 100 Values-->
+        <scene sceneID="mG0-27-zym">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="7F6-rA-zuL" customClass="MoreDetailTableViewController" customModule="CoreMotApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="tag-GY-pjO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="value" textLabel="Tm3-1n-0Mh" style="IBUITableViewCellStyleDefault" id="7iQ-h5-tUi">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7iQ-h5-tUi" id="Xcx-XH-Rjf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tm3-1n-0Mh">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7F6-rA-zuL" id="X0w-Lt-fza"/>
+                            <outlet property="delegate" destination="7F6-rA-zuL" id="YU0-WN-Tru"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Last 100 Values" id="siV-5b-3hF"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PHp-9L-b8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3498" y="492"/>
         </scene>
     </scenes>
     <resources>

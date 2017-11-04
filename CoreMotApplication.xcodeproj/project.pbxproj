@@ -16,6 +16,7 @@
 		CAB099DF1FAA5BB5005C5588 /* CoreMotApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB099DE1FAA5BB5005C5588 /* CoreMotApplicationTests.swift */; };
 		CAB099EA1FAA5BB6005C5588 /* CoreMotApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB099E91FAA5BB6005C5588 /* CoreMotApplicationUITests.swift */; };
 		CAB099F81FAA5BEE005C5588 /* AccelerationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB099F71FAA5BEE005C5588 /* AccelerationTableViewController.swift */; };
+		CAB099FE1FAD686E005C5588 /* MoreDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB099FD1FAD686E005C5588 /* MoreDetailTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CAB099E91FAA5BB6005C5588 /* CoreMotApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreMotApplicationUITests.swift; sourceTree = "<group>"; };
 		CAB099EB1FAA5BB6005C5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAB099F71FAA5BEE005C5588 /* AccelerationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccelerationTableViewController.swift; path = ../../CoreMotionApp/coreMotion/AccelerationTableViewController.swift; sourceTree = "<group>"; };
+		CAB099FD1FAD686E005C5588 /* MoreDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreDetailTableViewController.swift; path = ../MoreDetailTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				CAB099C71FAA5BB5005C5588 /* AppDelegate.swift */,
+				CAB099FD1FAD686E005C5588 /* MoreDetailTableViewController.swift */,
 				CAB099C91FAA5BB5005C5588 /* FirstViewController.swift */,
 				CAB099CB1FAA5BB5005C5588 /* SecondViewController.swift */,
 				CAB099F71FAA5BEE005C5588 /* AccelerationTableViewController.swift */,
@@ -272,6 +275,7 @@
 				CAB099F81FAA5BEE005C5588 /* AccelerationTableViewController.swift in Sources */,
 				CAB099C81FAA5BB5005C5588 /* AppDelegate.swift in Sources */,
 				CAB099CA1FAA5BB5005C5588 /* FirstViewController.swift in Sources */,
+				CAB099FE1FAD686E005C5588 /* MoreDetailTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
