@@ -17,6 +17,8 @@
 		CAB099EA1FAA5BB6005C5588 /* CoreMotApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB099E91FAA5BB6005C5588 /* CoreMotApplicationUITests.swift */; };
 		CAB099F81FAA5BEE005C5588 /* AccelerationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB099F71FAA5BEE005C5588 /* AccelerationTableViewController.swift */; };
 		CAB099FE1FAD686E005C5588 /* MoreDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB099FD1FAD686E005C5588 /* MoreDetailTableViewController.swift */; };
+		CAB09A001FB0224B005C5588 /* GyroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB099FF1FB0224B005C5588 /* GyroTableViewController.swift */; };
+		CAB09A021FB02361005C5588 /* GyroTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB09A011FB02361005C5588 /* GyroTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		CAB099EB1FAA5BB6005C5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAB099F71FAA5BEE005C5588 /* AccelerationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccelerationTableViewController.swift; path = ../../CoreMotionApp/coreMotion/AccelerationTableViewController.swift; sourceTree = "<group>"; };
 		CAB099FD1FAD686E005C5588 /* MoreDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoreDetailTableViewController.swift; path = ../MoreDetailTableViewController.swift; sourceTree = "<group>"; };
+		CAB099FF1FB0224B005C5588 /* GyroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GyroTableViewController.swift; sourceTree = "<group>"; };
+		CAB09A011FB02361005C5588 /* GyroTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GyroTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 				CAB099C91FAA5BB5005C5588 /* FirstViewController.swift */,
 				CAB099CB1FAA5BB5005C5588 /* SecondViewController.swift */,
 				CAB099F71FAA5BEE005C5588 /* AccelerationTableViewController.swift */,
+				CAB099FF1FB0224B005C5588 /* GyroTableViewController.swift */,
+				CAB09A011FB02361005C5588 /* GyroTabViewController.swift */,
 				CAB099CD1FAA5BB5005C5588 /* Main.storyboard */,
 				CAB099D01FAA5BB5005C5588 /* Assets.xcassets */,
 				CAB099D21FAA5BB5005C5588 /* LaunchScreen.storyboard */,
@@ -271,6 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB09A021FB02361005C5588 /* GyroTabViewController.swift in Sources */,
+				CAB09A001FB0224B005C5588 /* GyroTableViewController.swift in Sources */,
 				CAB099CC1FAA5BB5005C5588 /* SecondViewController.swift in Sources */,
 				CAB099F81FAA5BEE005C5588 /* AccelerationTableViewController.swift in Sources */,
 				CAB099C81FAA5BB5005C5588 /* AppDelegate.swift in Sources */,

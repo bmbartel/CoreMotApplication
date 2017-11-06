@@ -58,7 +58,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFc-7z-zL3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="822" y="493"/>
+            <point key="canvasLocation" x="822" y="492"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="I6g-FK-hdI">
@@ -73,6 +73,7 @@
                     <connections>
                         <segue destination="jAk-sk-ea7" kind="relationship" relationship="viewControllers" id="LDu-2Z-wOq"/>
                         <segue destination="y76-o5-tGn" kind="relationship" relationship="viewControllers" id="tqf-HO-jfi"/>
+                        <segue destination="8gd-Ma-56b" kind="relationship" relationship="viewControllers" id="42g-hF-0gF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fWP-ke-u3a" sceneMemberID="firstResponder"/>
@@ -145,7 +146,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1cj-31-WTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680.5" y="492.5"/>
+            <point key="canvasLocation" x="1727" y="493"/>
         </scene>
         <!--Accelerations-->
         <scene sceneID="1Xv-bG-OK6">
@@ -190,7 +191,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34t-K5-P2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2540" y="492"/>
+            <point key="canvasLocation" x="2542" y="492"/>
         </scene>
         <!--Last 100 Values-->
         <scene sceneID="mG0-27-zym">
@@ -232,13 +233,147 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHp-9L-b8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2540" y="1227"/>
+            <point key="canvasLocation" x="3606" y="784"/>
+        </scene>
+        <!--Gyro Type-->
+        <scene sceneID="GD1-Jo-oGT">
+            <objects>
+                <viewController id="enr-rz-wvq" customClass="GyroTabViewController" customModule="CoreMotApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e0c-yT-Aj8"/>
+                        <viewControllerLayoutGuide type="bottom" id="xIW-Zs-q6a"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ebh-oT-UHD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvS-o4-Smx">
+                                <rect key="frame" x="46" y="214" width="68" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97503465410000001" green="0.95679134129999999" blue="0.98232334850000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Pitch">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="WOu-Xj-SmE" kind="show" identifier="Pitch" id="XoG-EN-BfV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select Desired Rotation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0N-nk-caa">
+                                <rect key="frame" x="27" y="117" width="320" height="28"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xj-n3-4xv">
+                                <rect key="frame" x="261" y="214" width="68" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97503465410000001" green="0.95679134129999999" blue="0.98232334850000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Yaw">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="WOu-Xj-SmE" kind="show" identifier="Yaw" id="Qo0-GQ-ctJ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6TL-yo-gXx">
+                                <rect key="frame" x="153" y="214" width="68" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XI8-v9-vTF">
+                                <rect key="frame" x="153" y="214" width="68" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97503465410000001" green="0.95679134129999999" blue="0.98232334850000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Roll">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="WOu-Xj-SmE" kind="show" identifier="Roll" id="Hww-Sg-ozZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83895420440000001" green="0.88561169090000003" blue="0.95745628240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Gyro Type" id="yy9-6f-6hC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Yr-z5-yx0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726" y="1243"/>
+        </scene>
+        <!--Gyro-->
+        <scene sceneID="vmt-ul-G7H">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8gd-Ma-56b" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Gyro" image="first" id="neF-ql-w0x"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="f6O-BM-weG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="enr-rz-wvq" kind="relationship" relationship="rootViewController" id="pJM-Ao-lTA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kt2-df-z70" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="822" y="1243"/>
+        </scene>
+        <!--Accelerations-->
+        <scene sceneID="y0Z-Pa-Ajo">
+            <objects>
+                <tableViewController id="WOu-Xj-SmE" customClass="GyroTableViewController" customModule="CoreMotApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BFi-zm-gNm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.83895420440000001" green="0.88561169090000003" blue="0.95745628240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="6Wr-cj-PXu" style="IBUITableViewCellStyleDefault" id="UG6-CY-EsJ">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UG6-CY-EsJ" id="cVt-2t-NiV">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6Wr-cj-PXu">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.83895420440000001" green="0.88561169090000003" blue="0.95745628240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="WOu-Xj-SmE" id="dhv-Mo-bFF"/>
+                            <outlet property="delegate" destination="WOu-Xj-SmE" id="nVO-Lp-Ehj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Accelerations" id="GzC-Td-odR">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="kIZ-85-NBD"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="7F6-rA-zuL" kind="show" identifier="MoreDetailGyro" id="bX5-J2-hXc"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3AL-YH-CQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2542" y="1243"/>
         </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yQc-ZH-K0v"/>
+        <segue reference="Qo0-GQ-ctJ"/>
+        <segue reference="bX5-J2-hXc"/>
+        <segue reference="WC5-cr-K08"/>
     </inferredMetricsTieBreakers>
 </document>
