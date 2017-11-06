@@ -45,7 +45,7 @@
         <scene sceneID="UHN-L7-o5B">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y76-o5-tGn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Acceleration" image="second" id="RH8-fs-g67"/>
+                    <tabBarItem key="tabBarItem" title="Acceleration" image="first" id="RH8-fs-g67"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gWw-Kb-cVi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -77,7 +77,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fWP-ke-u3a" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-372" y="-12"/>
+            <point key="canvasLocation" x="-182" y="492"/>
         </scene>
         <!--Acceleration Type-->
         <scene sceneID="a1J-Tc-zdD">
@@ -200,6 +200,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.83895420440000001" green="0.88561169090000003" blue="0.95745628240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="value" textLabel="Tm3-1n-0Mh" style="IBUITableViewCellStyleDefault" id="7iQ-h5-tUi">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
@@ -216,7 +217,9 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" red="0.83895420440000001" green="0.88561169090000003" blue="0.95745628240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.83895420440000001" green="0.88561169090000003" blue="0.95745628240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -224,16 +227,16 @@
                             <outlet property="delegate" destination="7F6-rA-zuL" id="YU0-WN-Tru"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Last100" image="first" selectedImage="first" id="dUs-ob-1tu"/>
                     <navigationItem key="navigationItem" title="Last 100 Values" id="siV-5b-3hF"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHp-9L-b8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3498" y="492"/>
+            <point key="canvasLocation" x="2540" y="1227"/>
         </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="yQc-ZH-K0v"/>
