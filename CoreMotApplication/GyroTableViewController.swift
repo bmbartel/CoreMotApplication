@@ -10,6 +10,8 @@
 import UIKit
 import CoreMotion
 
+// This view controller does essentially the same thing as the acceleration table view controller. However, it displays rotational values (degrees).
+
 class GyroTableViewController: UITableViewController {
     
     let motionManager = CMMotionManager()

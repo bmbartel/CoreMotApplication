@@ -8,8 +8,11 @@
 
 import UIKit
 
+// This view controller will display acceleration(x,y,z) or gyro(roll,pitch,yaw) depending on what the user has navigated to. In this controller, moving forward for the final project, we could attempt to make plots. Potentially change this to a split view controller. And could perform data manipulation to try to estimate distance from acceleration values.
+
 class MoreDetailTableViewController: UITableViewController {
 
+    // Initialize variables, so that we can pass values over from the previous views.
     var Values = [0.0]
     var sensorType = ""
     
@@ -52,6 +55,7 @@ class MoreDetailTableViewController: UITableViewController {
         
         let collectedAcceleration = Values[indexPath.row]
         
+    // Only utilize the thresholding functionality in this tab if we are looking at the accelerometer values. The gyro values will always plot in black.
         if sensorType == "Accel"
         {
         if abs(Values[indexPath.row]) >= 5

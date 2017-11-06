@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Home Page! Welcome!" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="22h-Oc-xHB">
-                                <rect key="frame" x="2.5" y="313" width="370" height="41.5"/>
+                                <rect key="frame" x="2.5" y="313" width="370" height="41"/>
                                 <color key="backgroundColor" red="0.83895420440000001" green="0.88561169090000003" blue="0.95745628240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="36"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -228,7 +228,6 @@
                             <outlet property="delegate" destination="7F6-rA-zuL" id="YU0-WN-Tru"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Last100" image="first" selectedImage="first" id="dUs-ob-1tu"/>
                     <navigationItem key="navigationItem" title="Last 100 Values" id="siV-5b-3hF"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHp-9L-b8g" userLabel="First Responder" sceneMemberID="firstResponder"/>

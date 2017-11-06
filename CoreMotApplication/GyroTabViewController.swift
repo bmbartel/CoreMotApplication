@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+// This is essentially the same as SecondViewController, However, this prepares for the gyro data.
 class GyroTabViewController: UIViewController {
 
     override func viewDidLoad() {

@@ -8,6 +8,7 @@
 
 import UIKit
 
+// This tab is currently only being used as the home screen for the application.
 class FirstViewController: UIViewController {
     
     override func viewDidLoad() {

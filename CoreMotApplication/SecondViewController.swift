@@ -10,6 +10,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
+// This class is used as the starting point for getting accelerometer data.
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -23,9 +24,9 @@ class SecondViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-
+// When segue is called within the storyboard, it segues to the acceleration table view.
         let destVC = segue.destination as! AccelerationTableViewController
-        
+// Depending on the button that is selected in the storyboard, the appropriate title will be sent to AccelerationTableViewController to be used as the navigation title.
         let buttonSelected = segue.identifier
         destVC.buttonSelected = buttonSelected.self!
         
