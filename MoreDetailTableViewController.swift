@@ -8,7 +8,7 @@
 
 import UIKit
 
-// This view controller will display acceleration(x,y,z) or gyro(roll,pitch,yaw) depending on what the user has navigated to. In this controller, moving forward for the final project, we could attempt to make plots. Potentially change this to a split view controller. And could perform data manipulation to try to estimate distance from acceleration values.
+// This view controller will display acceleration(x,y,z) or gyro(roll,pitch,yaw) depending on what the user has navigated to. In this controller, moving forward for the final project, we could attempt to make plots. Potentially change this to a split view controller. And could perform data manipulation to try to estimate distance from acceleration values. 
 
 class MoreDetailTableViewController: UITableViewController {
 
@@ -20,6 +20,7 @@ class MoreDetailTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Maybe conditionally add a button: If the acceleration values are the values being looked at, add a button entitled (Estimate Distance). Then this button will Segue to another view which will plot and display the distance estimates (Split View Controller). Add this button as soon as the program loads. And set-up a performsegue function for this button.
 
     }
 

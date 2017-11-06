@@ -1,6 +1,6 @@
 //
 //  SecondViewController.swift
-//  coreMotion
+//  CoreMotApplication
 //
 //  Created by Brandon on 10/29/17.
 //  Copyright © 2017 Arizona State University. All rights reserved.
