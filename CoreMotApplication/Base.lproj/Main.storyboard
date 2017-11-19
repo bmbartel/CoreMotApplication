@@ -325,13 +325,13 @@
         <!--Sessions-->
         <scene sceneID="3k2-RO-pyT">
             <objects>
-                <tableViewController id="FDK-VH-7iE" sceneMemberID="viewController">
+                <tableViewController id="FDK-VH-7iE" customClass="SessionsViewController" customModule="CoreMotApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="bNT-8Q-bhw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Gmr-pj-FSn">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SessionCell" id="Gmr-pj-FSn">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gmr-pj-FSn" id="BCQ-mu-ujo">
@@ -351,7 +351,7 @@
             </objects>
             <point key="canvasLocation" x="1726" y="2231"/>
         </scene>
-        <!--Accelerations-->
+        <!--Gyro-->
         <scene sceneID="y0Z-Pa-Ajo">
             <objects>
                 <tableViewController id="WOu-Xj-SmE" customClass="GyroTableViewController" customModule="CoreMotApplication" customModuleProvider="target" sceneMemberID="viewController">
@@ -385,7 +385,7 @@
                             <outlet property="delegate" destination="WOu-Xj-SmE" id="nVO-Lp-Ehj"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Accelerations" id="GzC-Td-odR">
+                    <navigationItem key="navigationItem" title="Gyro" id="GzC-Td-odR">
                         <barButtonItem key="backBarButtonItem" title="Back" id="kIZ-85-NBD"/>
                     </navigationItem>
                     <connections>

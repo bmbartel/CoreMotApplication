@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewController: UITableViewController {
+class SessionsViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
