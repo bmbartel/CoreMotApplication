@@ -11,6 +11,7 @@ import UIKit
 class DistanceTableViewController: UITableViewController {
 
     var accelerations = [0.0]
+    
     var LastDistanceValue = 0.0
     
     override func viewDidLoad() {
@@ -49,8 +50,8 @@ class DistanceTableViewController: UITableViewController {
 
         // Multiply by 39.3701 to convert a meter value to inches.
         cell.textLabel?.text? = String(DistanceValues * 39.3701)
-        
         return cell
+
     }
 
 
