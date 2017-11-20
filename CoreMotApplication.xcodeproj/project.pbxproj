@@ -10,6 +10,7 @@
 		CA3E2B421FBD383500BFF097 /* AccelerationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E2B411FBD383500BFF097 /* AccelerationTableViewController.swift */; };
 		CA3E2B441FBD391E00BFF097 /* MoreDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E2B431FBD391E00BFF097 /* MoreDetailTableViewController.swift */; };
 		CA3E2B461FC2420A00BFF097 /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E2B451FC2420A00BFF097 /* SessionsViewController.swift */; };
+		CA3E2B481FC254F400BFF097 /* SplitViewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E2B471FC254F400BFF097 /* SplitViewsTableViewController.swift */; };
 		CAB099C81FAA5BB5005C5588 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB099C71FAA5BB5005C5588 /* AppDelegate.swift */; };
 		CAB099CA1FAA5BB5005C5588 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB099C91FAA5BB5005C5588 /* FirstViewController.swift */; };
 		CAB099CC1FAA5BB5005C5588 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB099CB1FAA5BB5005C5588 /* SecondViewController.swift */; };
@@ -43,6 +44,7 @@
 		CA3E2B411FBD383500BFF097 /* AccelerationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerationTableViewController.swift; sourceTree = "<group>"; };
 		CA3E2B431FBD391E00BFF097 /* MoreDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreDetailTableViewController.swift; sourceTree = "<group>"; };
 		CA3E2B451FC2420A00BFF097 /* SessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
+		CA3E2B471FC254F400BFF097 /* SplitViewsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewsTableViewController.swift; sourceTree = "<group>"; };
 		CAB099C41FAA5BB5005C5588 /* CoreMotApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreMotApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB099C71FAA5BB5005C5588 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CAB099C91FAA5BB5005C5588 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				CAB099FF1FB0224B005C5588 /* GyroTableViewController.swift */,
 				CAB09A011FB02361005C5588 /* GyroTabViewController.swift */,
 				CA3E2B451FC2420A00BFF097 /* SessionsViewController.swift */,
+				CA3E2B471FC254F400BFF097 /* SplitViewsTableViewController.swift */,
 				CAB099CD1FAA5BB5005C5588 /* Main.storyboard */,
 				CAB099D01FAA5BB5005C5588 /* Assets.xcassets */,
 				CAB099D21FAA5BB5005C5588 /* LaunchScreen.storyboard */,
@@ -288,6 +291,7 @@
 				CAB099CC1FAA5BB5005C5588 /* SecondViewController.swift in Sources */,
 				CAB099C81FAA5BB5005C5588 /* AppDelegate.swift in Sources */,
 				CAB099CA1FAA5BB5005C5588 /* FirstViewController.swift in Sources */,
+				CA3E2B481FC254F400BFF097 /* SplitViewsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
