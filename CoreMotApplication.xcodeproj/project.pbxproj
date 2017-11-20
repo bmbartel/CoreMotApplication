@@ -211,7 +211,7 @@
 				TargetAttributes = {
 					CAB099C31FAA5BB5005C5588 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 3JP88862F2;
+						DevelopmentTeam = 35BB329MTT;
 						ProvisioningStyle = Automatic;
 					};
 					CAB099D91FAA5BB5005C5588 = {
@@ -441,7 +441,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3JP88862F2;
+				DEVELOPMENT_TEAM = 35BB329MTT;
 				INFOPLIST_FILE = CoreMotApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ASU.CoreMotApplication;
@@ -454,7 +454,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3JP88862F2;
+				DEVELOPMENT_TEAM = 35BB329MTT;
 				INFOPLIST_FILE = CoreMotApplication/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ASU.CoreMotApplication;
