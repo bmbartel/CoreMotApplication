@@ -147,7 +147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1cj-31-WTb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1727" y="493"/>
+            <point key="canvasLocation" x="1726" y="417"/>
         </scene>
         <!--Accelerations-->
         <scene sceneID="1Xv-bG-OK6">
@@ -192,7 +192,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="34t-K5-P2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2542" y="492"/>
+            <point key="canvasLocation" x="2542" y="417"/>
         </scene>
         <!--Last 100 Values-->
         <scene sceneID="mG0-27-zym">
@@ -393,7 +393,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xxm-iK-Z5L">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ValuesCell" id="xxm-iK-Z5L">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xxm-iK-Z5L" id="LtV-9Y-2q7">
@@ -410,7 +410,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uOU-7A-tXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3921" y="1934"/>
+            <point key="canvasLocation" x="3920.8000000000002" y="1933.5832083958023"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2Io-SL-B5O">
@@ -500,7 +500,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Qo0-GQ-ctJ"/>
-        <segue reference="bX5-J2-hXc"/>
-        <segue reference="WC5-cr-K08"/>
+        <segue reference="FQu-4m-5mE"/>
+        <segue reference="Ikd-FA-y6m"/>
     </inferredMetricsTieBreakers>
 </document>
