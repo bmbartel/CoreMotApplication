@@ -48,6 +48,8 @@ class DistanceTableViewController: UITableViewController {
         let DistanceValues = abs(accelerations[indexPath.row])/100.0 + LastDistanceValue
         LastDistanceValue = DistanceValues
 
+        // Need to add a few lines to this script to utilize rotational matricies when the phone is rotated during movement. At least account for a rotation around one axis. To do this will be slightly difficult. We may have to do the rotation matrix to the acceleration on the previous tab. Or we could make another tab for calculating distance to utilize this algorithm.
+        
         // Multiply by 39.3701 to convert a meter value to inches.
         cell.textLabel?.text? = String(DistanceValues * 39.3701)
         return cell

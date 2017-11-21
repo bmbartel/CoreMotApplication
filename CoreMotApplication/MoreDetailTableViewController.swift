@@ -81,11 +81,20 @@ class MoreDetailTableViewController: UITableViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        
+        if segue.identifier == "DistanceEstimate"
+        {
         let destVC = segue.destination as! DistanceTableViewController
         
         //Flips the order of the array before sending it. Important for visualization of distance over time.
         destVC.accelerations = Array(Values.self.reversed())
+        }
+        
+        if segue.identifier == "sendBack"
+        {
+            let destVC = segue.destination as! SecondViewController
+            destVC.navigationController?.isNavigationBarHidden = true
+            
+        }
     }
     
     

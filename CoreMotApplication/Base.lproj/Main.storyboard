@@ -235,6 +235,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Last 100 Values" id="siV-5b-3hF">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="93q-Ja-RvK">
+                            <connections>
+                                <segue destination="78C-2X-1UM" kind="show" identifier="sendBack" id="muz-wB-7dx"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Estimate Distance" id="d8b-Bg-a1x">
                             <connections>
                                 <segue destination="iBR-wc-MGs" kind="show" identifier="DistanceEstimate" id="Gx0-P4-BLf"/>
@@ -630,6 +635,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FQu-4m-5mE"/>
+        <segue reference="muz-wB-7dx"/>
         <segue reference="Qo0-GQ-ctJ"/>
     </inferredMetricsTieBreakers>
 </document>
