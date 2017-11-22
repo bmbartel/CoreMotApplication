@@ -1,8 +1,8 @@
 //
-//  MoreDetailTableViewController.swift
+//  MoreDetailGyroTableViewController.swift
 //  CoreMotApplication
 //
-//  Created by Brandon on 11/3/17.
+//  Created by Brandon on 11/22/17.
 //  Copyright © 2017 Arizona State University. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 
 // This view controller will display acceleration(x,y,z) or gyro(roll,pitch,yaw) depending on what the user has navigated to. In this controller, moving forward for the final project, we could attempt to make plots. Potentially change this to a split view controller. And could perform data manipulation to try to estimate distance from acceleration values.
 
-class MoreDetailTableViewController: UITableViewController {
+class MoreDetailGyroTableViewController: UITableViewController {
     
     // Initialize variables, so that we can pass values over from the previous views.
     var Values = [0.0]
@@ -54,36 +54,21 @@ class MoreDetailTableViewController: UITableViewController {
         // Configure the cell...
         
         
-        let collectedAcceleration = Values[indexPath.row]
+        let collectedGyro = Values[indexPath.row]
         
         // Only utilize the thresholding functionality in this tab if we are looking at the accelerometer values. The gyro values will always plot in black.
-  
-            if abs(Values[indexPath.row]) >= 5
-            {
-                cell.textLabel?.textColor = UIColor.green
-            }
-            else
-            {
-                cell.textLabel?.textColor = UIColor.black
-            }
+
         
-        
-        cell.textLabel?.text? = String(collectedAcceleration)
+        cell.textLabel?.text? = String(collectedGyro)
         
         
         return cell
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "DistanceEstimate"
-        {
-        let destVC = segue.destination as! DistanceTableViewController
-        
-        //Flips the order of the array before sending it. Important for visualization of distance over time.
-        destVC.accelerations = Array(Values.self.reversed())
-        }
+        // If we add a segue here.
     }
-
+    
     
 }

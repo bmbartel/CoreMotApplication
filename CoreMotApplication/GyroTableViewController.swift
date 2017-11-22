@@ -174,7 +174,7 @@ class GyroTableViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let SplitVC = segue.destination as! MoreDetailTableViewController
+        let SplitVC = segue.destination as! GyroSplitViewController
         SplitVC.sensorType = "Gyro"
         SplitVC.Values = self.currentValue
         self.motionManager.stopDeviceMotionUpdates()

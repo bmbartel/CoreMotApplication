@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -235,11 +236,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Last 100 Values" id="siV-5b-3hF">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="93q-Ja-RvK">
-                            <connections>
-                                <segue destination="78C-2X-1UM" kind="show" identifier="sendBack" id="muz-wB-7dx"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="93q-Ja-RvK"/>
                         <barButtonItem key="rightBarButtonItem" title="Estimate Distance" id="d8b-Bg-a1x">
                             <connections>
                                 <segue destination="iBR-wc-MGs" kind="show" identifier="DistanceEstimate" id="Gx0-P4-BLf"/>
@@ -472,6 +469,49 @@
             </objects>
             <point key="canvasLocation" x="3481" y="2230"/>
         </scene>
+        <!--Plotting Gyro View Controller-->
+        <scene sceneID="fNK-4g-lWv">
+            <objects>
+                <viewController id="sTP-eq-VTx" customClass="PlottingGyroViewController" customModule="CoreMotApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vqc-7g-DoJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="1eE-Db-DOd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xR1-wg-dbx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8J-z1-R6W">
+                                <rect key="frame" x="16" y="610" width="343" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.83895420440000001" green="0.88561169090000003" blue="0.95745628240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9f3-rw-ggY" customClass="JBLineChartView">
+                                <rect key="frame" x="16" y="72" width="343" height="530"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="v8J-z1-R6W" firstAttribute="top" secondItem="9f3-rw-ggY" secondAttribute="bottom" constant="8" id="9OL-ni-6x7"/>
+                            <constraint firstItem="9f3-rw-ggY" firstAttribute="top" secondItem="Vqc-7g-DoJ" secondAttribute="bottom" constant="8" id="CJq-SL-F3p"/>
+                            <constraint firstItem="1eE-Db-DOd" firstAttribute="top" secondItem="v8J-z1-R6W" secondAttribute="bottom" constant="8" id="OQU-WM-lSw"/>
+                            <constraint firstItem="v8J-z1-R6W" firstAttribute="trailing" secondItem="xR1-wg-dbx" secondAttribute="trailingMargin" id="QDB-qe-nOe"/>
+                            <constraint firstItem="9f3-rw-ggY" firstAttribute="trailing" secondItem="xR1-wg-dbx" secondAttribute="trailingMargin" id="a08-rY-QcE"/>
+                            <constraint firstItem="v8J-z1-R6W" firstAttribute="leading" secondItem="xR1-wg-dbx" secondAttribute="leadingMargin" id="oat-iz-DRe"/>
+                            <constraint firstItem="9f3-rw-ggY" firstAttribute="leading" secondItem="xR1-wg-dbx" secondAttribute="leadingMargin" id="vBb-HD-fDh"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="GyroDataLabel" destination="v8J-z1-R6W" id="cZK-gO-ZIP"/>
+                        <outlet property="GyroLine" destination="9f3-rw-ggY" id="dIh-fL-nD7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8b4-gG-YX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5356" y="1603"/>
+        </scene>
         <!--Split Views Table View Controller-->
         <scene sceneID="6iC-Df-Ve7">
             <objects>
@@ -507,7 +547,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uOU-7A-tXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4472.8000000000002" y="1949.7751124437782"/>
+            <point key="canvasLocation" x="4473" y="2232"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2Io-SL-B5O">
@@ -525,7 +565,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J7S-8Z-8ba" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4474" y="2794"/>
+            <point key="canvasLocation" x="4473" y="3113"/>
         </scene>
         <!--Gyro-->
         <scene sceneID="y0Z-Pa-Ajo">
@@ -565,17 +605,30 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="kIZ-85-NBD"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="SvF-Js-zvg" kind="show" identifier="MoreDetailGyro" id="1Nc-8a-gxV"/>
+                        <segue destination="Ve2-Hb-Gro" kind="show" identifier="MoreDetailGyro" id="Zpw-jk-dhZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3AL-YH-CQZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2542" y="1243"/>
         </scene>
+        <!--Gyro Split View Controller-->
+        <scene sceneID="IhQ-PX-1fk">
+            <objects>
+                <splitViewController id="Ve2-Hb-Gro" customClass="GyroSplitViewController" customModule="CoreMotApplication" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="SvF-Js-zvg" kind="relationship" relationship="masterViewController" id="bMv-Ta-5bs"/>
+                        <segue destination="sTP-eq-VTx" kind="relationship" relationship="detailViewController" id="waA-8d-BG5"/>
+                    </connections>
+                </splitViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r9f-70-2WC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4018" y="1243"/>
+        </scene>
         <!--Last 100 Values-->
         <scene sceneID="mbb-z7-r5z">
             <objects>
-                <tableViewController title="Last 100 Values" id="SvF-Js-zvg" customClass="MoreDetailTableViewController" customModule="CoreMotApplication" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Last 100 Values" id="SvF-Js-zvg" customClass="MoreDetailGyroTableViewController" customModule="CoreMotApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="w9r-To-Pwt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -608,7 +661,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xoY-PM-XSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3514" y="1243"/>
+            <point key="canvasLocation" x="5356" y="908"/>
         </scene>
         <!--Sessions-->
         <scene sceneID="mxs-Uq-kOv">
@@ -635,7 +688,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="FQu-4m-5mE"/>
-        <segue reference="muz-wB-7dx"/>
         <segue reference="Qo0-GQ-ctJ"/>
     </inferredMetricsTieBreakers>
 </document>
