@@ -16,6 +16,9 @@ class MoreDetailTableViewController: UITableViewController {
     var Values = [0.0]
     var sensorType = ""
     
+    @IBAction func GoBack(_ sender: Any) {
+         performSegue(withIdentifier: "UnwindToAccel", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,7 +8,9 @@
 
 import UIKit
 
+
 class SecondViewController: UIViewController {
+    
     
 // This class is used as the starting point for getting accelerometer data.
     override func viewDidLoad() {
@@ -30,6 +32,7 @@ class SecondViewController: UIViewController {
         let buttonSelected = segue.identifier
         destVC.buttonSelected = buttonSelected.self!
         
-        
     }
+    
+    @IBAction func unwindToAccel(segue:UIStoryboardSegue) {}
 }

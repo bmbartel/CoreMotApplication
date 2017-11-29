@@ -236,7 +236,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Last 100 Values" id="siV-5b-3hF">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="93q-Ja-RvK"/>
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="93q-Ja-RvK">
+                            <connections>
+                                <segue destination="B6b-8s-pGC" kind="unwind" identifier="UnwindToAccel" unwindAction="unwindToAccelWithSegue:" id="44m-Pd-Qtm"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Estimate Distance" id="d8b-Bg-a1x">
                             <connections>
                                 <segue destination="iBR-wc-MGs" kind="show" identifier="DistanceEstimate" id="Gx0-P4-BLf"/>
@@ -245,6 +249,7 @@
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PHp-9L-b8g" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="B6b-8s-pGC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3514" y="417"/>
         </scene>
@@ -482,13 +487,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8J-z1-R6W">
-                                <rect key="frame" x="16" y="610" width="343" height="0.0"/>
+                                <rect key="frame" x="16" y="659" width="343" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.83895420440000001" green="0.88561169090000003" blue="0.95745628240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9f3-rw-ggY" customClass="JBLineChartView">
-                                <rect key="frame" x="16" y="72" width="343" height="530"/>
+                                <rect key="frame" x="16" y="28" width="343" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
