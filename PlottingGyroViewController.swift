@@ -30,7 +30,8 @@ class PlottingGyroViewController: UIViewController, JBLineChartViewDelegate, JBL
         GyroLine.backgroundColor = UIColor.blue
         GyroLine.delegate = self
         GyroLine.dataSource = self
-        GyroLine.minimumValue = -360
+    // Minimum value has to be 0 or positive. To make this work better, we need to add 180 to all values.
+        GyroLine.minimumValue = 0
         GyroLine.maximumValue = 360
         
         GyroLine.setState(.collapsed, animated: false)

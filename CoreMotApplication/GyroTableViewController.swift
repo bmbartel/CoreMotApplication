@@ -55,11 +55,11 @@ class GyroTableViewController: UITableViewController {
                 if let data = self.motionManager.deviceMotion {
                     switch self.buttonSelected {
                     case "Pitch":
-                        self.currentValue.insert(data.attitude.pitch * 180/Double.pi, at: 0)
+                        self.currentValue.insert((data.attitude.pitch * 180/Double.pi) + 180, at: 0)
                     case "Roll":
-                        self.currentValue.insert(data.attitude.roll * 180/Double.pi, at: 0)
+                        self.currentValue.insert((data.attitude.roll * 180/Double.pi) + 180, at: 0)
                     case "Yaw":
-                        self.currentValue.insert(data.attitude.yaw * 180/Double.pi, at: 0)
+                        self.currentValue.insert((data.attitude.yaw * 180/Double.pi) + 180, at: 0)
                     default:
                         print("Missed Value")
                     }
@@ -180,6 +180,8 @@ class GyroTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let SplitVC = segue.destination as! GyroSplitViewController
         SplitVC.sensorType = "Gyro"
+       
+
         SplitVC.Values = self.currentValue
         self.motionManager.stopDeviceMotionUpdates()
     }

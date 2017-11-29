@@ -17,6 +17,7 @@ class AccelerationTableViewController: UITableViewController {
     var buttonSelected = ""
     let interval = 0.1
     var motionTimer : Timer?
+    
     // If the current value changes, and the count is less than 100, it will reload the data. If it is equal to 100, then the array is full and it will segue to MoreDetail: Just showing the last 100 values in an alternate view.
     var currentValue = [0.0] {
         didSet {
