@@ -50,21 +50,25 @@ class GyroTableViewController: UITableViewController {
         }
         
         // create and start timer with handler block that updates labels in the view
-        self.motionTimer = Timer(fire: Date(), interval: self.interval, repeats: true, block: {(motionTimer) in
-            if let data = self.motionManager.deviceMotion {
-                switch self.buttonSelected {
-                case "Pitch":
-                    self.currentValue.insert(data.attitude.pitch * 180/Double.pi, at: 0)
-                case "Roll":
-                    self.currentValue.insert(data.attitude.roll * 180/Double.pi, at: 0)
-                case "Yaw":
-                    self.currentValue.insert(data.attitude.yaw * 180/Double.pi, at: 0)
-                default:
-                    print("Missed Value")
+        if #available(iOS 10.0, *) {
+            self.motionTimer = Timer(fire: Date(), interval: self.interval, repeats: true, block: {(motionTimer) in
+                if let data = self.motionManager.deviceMotion {
+                    switch self.buttonSelected {
+                    case "Pitch":
+                        self.currentValue.insert(data.attitude.pitch * 180/Double.pi, at: 0)
+                    case "Roll":
+                        self.currentValue.insert(data.attitude.roll * 180/Double.pi, at: 0)
+                    case "Yaw":
+                        self.currentValue.insert(data.attitude.yaw * 180/Double.pi, at: 0)
+                    default:
+                        print("Missed Value")
+                    }
                 }
             }
+            )
+        } else {
+            presentAlert(title: "Error", message: "Device Motion is not available.")
         }
-        )
         
         
         
@@ -92,7 +96,7 @@ class GyroTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         // check if we're able to sense device motion
-        if motionManager.isDeviceMotionAvailable {
+         if motionManager.isDeviceMotionAvailable, #available(iOS 10.0, *)  {
             //prime motion variables
             self.motionSetup()
             

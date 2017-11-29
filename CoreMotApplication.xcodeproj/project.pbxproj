@@ -829,6 +829,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3JP88862F2;
 				INFOPLIST_FILE = CoreMotApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ASU.CoreMotApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -845,6 +846,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3JP88862F2;
 				INFOPLIST_FILE = CoreMotApplication/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ASU.CoreMotApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
