@@ -16,6 +16,9 @@ class MoreDetailGyroTableViewController: UITableViewController {
     var Values = [0.0]
     var sensorType = ""
     
+    @IBAction func GoBack(_ sender: Any) {
+        performSegue(withIdentifier: "UnwindToGyro", sender: self)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

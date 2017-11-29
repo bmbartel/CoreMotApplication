@@ -54,6 +54,7 @@ class GyroTableViewController: UITableViewController {
             self.motionTimer = Timer(fire: Date(), interval: self.interval, repeats: true, block: {(motionTimer) in
                 if let data = self.motionManager.deviceMotion {
                     switch self.buttonSelected {
+                        // Add 180 to every value to make positive between 0-360.
                     case "Pitch":
                         self.currentValue.insert((data.attitude.pitch * 180/Double.pi) + 180, at: 0)
                     case "Roll":
@@ -180,8 +181,7 @@ class GyroTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let SplitVC = segue.destination as! GyroSplitViewController
         SplitVC.sensorType = "Gyro"
-       
-
+        
         SplitVC.Values = self.currentValue
         self.motionManager.stopDeviceMotionUpdates()
     }
