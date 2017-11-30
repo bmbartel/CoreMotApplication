@@ -17,7 +17,7 @@ class PlottingGyroViewController: UIViewController, JBLineChartViewDelegate, JBL
     var Values = [0.0]
     var sensorType = ""
     // X-Axis is 0 to 100 samples.
-    var xAxis = [0...100]
+    var xAxis = [1.0...100.0]
     
     
     @IBOutlet weak var GyroLine: JBLineChartView!
@@ -33,8 +33,9 @@ class PlottingGyroViewController: UIViewController, JBLineChartViewDelegate, JBL
         GyroLine.delegate = self
         GyroLine.dataSource = self
     // Minimum value has to be 0 or positive. To make this work better, we need to add 180 to all values.
-        GyroLine.minimumValue = 0
-        GyroLine.maximumValue = 360
+        
+        GyroLine.minimumValue = CGFloat(Int(Values.min()!)+5)
+        GyroLine.maximumValue = CGFloat(Int(Values.max()!))
         
         GyroLine.setState(.collapsed, animated: false)
         
@@ -91,7 +92,7 @@ class PlottingGyroViewController: UIViewController, JBLineChartViewDelegate, JBL
     }
     
     func lineChartView(_ lineChartView: JBLineChartView!, showsDotsForLineAtLineIndex lineIndex: UInt) -> Bool {
-        return true
+        return false
     }
     
     func lineChartView(_ lineChartView: JBLineChartView!, colorForDotAtHorizontalIndex horizontalIndex: UInt, atLineIndex lineIndex: UInt) -> UIColor! {
@@ -105,10 +106,12 @@ class PlottingGyroViewController: UIViewController, JBLineChartViewDelegate, JBL
         if (lineIndex == 0) {
             let data = Values[Int(horizontalIndex)]
             let axis = xAxis[Int(horizontalIndex)]
+            GyroDataLabel.text = "\(data), on sample number \(axis)"
         }
-        GyroDataLabel.text = String(describing: Values)
+
+        
     }
     func didDeselectLine(in lineChartView: JBLineChartView!) {
-        GyroDataLabel.text = ""
+        GyroDataLabel.text = "Hover Over Point to See Value."
     }
 }
