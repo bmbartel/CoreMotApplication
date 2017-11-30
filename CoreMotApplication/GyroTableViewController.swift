@@ -182,7 +182,7 @@ class GyroTableViewController: UITableViewController {
         let SplitVC = segue.destination as! GyroSplitViewController
         SplitVC.sensorType = "Gyro"
         
-        SplitVC.Values = self.currentValue[]
+        SplitVC.Values = self.currentValue
         self.motionManager.stopDeviceMotionUpdates()
     }
     
