@@ -32,10 +32,10 @@ class PlottingGyroViewController: UIViewController, JBLineChartViewDelegate, JBL
         GyroLine.backgroundColor = UIColor.darkGray
         GyroLine.delegate = self
         GyroLine.dataSource = self
-    // Minimum value has to be 0 or positive. To make this work better, we need to add 180 to all values.
+    // Minimum value has to be 0 or positive. To make this work better, we need to add 180 to all values. I then make the plot fill out the screen by using the min and max values of the array.
         
-        GyroLine.minimumValue = CGFloat(Int(Values.min()!)+5)
-        GyroLine.maximumValue = CGFloat(Int(Values.max()!))
+        GyroLine.minimumValue = CGFloat(Int(Values.min()!))
+        GyroLine.maximumValue = CGFloat(Int(Values.max()!+15))
         
         GyroLine.setState(.collapsed, animated: false)
         
