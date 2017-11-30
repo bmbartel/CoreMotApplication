@@ -16,7 +16,8 @@ class GyroSplitViewController: UISplitViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        (self.viewControllers.first as! MoreDetailGyroTableViewController).Values = self.Values
+        let navVC = (self.viewControllers.first as! UINavigationController)
+        (navVC.viewControllers.first as! MoreDetailGyroTableViewController).Values = self.Values
         (self.viewControllers.last as! PlottingGyroViewController).Values = self.Values
     }
 
