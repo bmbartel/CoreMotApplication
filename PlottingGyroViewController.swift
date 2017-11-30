@@ -27,9 +27,9 @@ class PlottingGyroViewController: UIViewController, JBLineChartViewDelegate, JBL
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor.blue
+        view.backgroundColor = UIColor.darkGray
  
-        GyroLine.backgroundColor = UIColor.blue
+        GyroLine.backgroundColor = UIColor.darkGray
         GyroLine.delegate = self
         GyroLine.dataSource = self
     // Minimum value has to be 0 or positive. To make this work better, we need to add 180 to all values.
