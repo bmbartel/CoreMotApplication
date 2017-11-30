@@ -829,7 +829,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3JP88862F2;
 				INFOPLIST_FILE = CoreMotApplication/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ASU.CoreMotApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -846,7 +846,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 3JP88862F2;
 				INFOPLIST_FILE = CoreMotApplication/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ASU.CoreMotApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -923,6 +923,7 @@
 				CA3E2B6B1FC5FC7000BFF097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CA3E2B6D1FC5FC7000BFF097 /* Build configuration list for PBXNativeTarget "JBChartTests" */ = {
 			isa = XCConfigurationList;
@@ -931,6 +932,7 @@
 				CA3E2B6F1FC5FC7000BFF097 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CAB099BF1FAA5BB5005C5588 /* Build configuration list for PBXProject "CoreMotApplication" */ = {
 			isa = XCConfigurationList;
