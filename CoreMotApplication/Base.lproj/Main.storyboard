@@ -622,7 +622,7 @@
             <objects>
                 <splitViewController id="Ve2-Hb-Gro" customClass="GyroSplitViewController" customModule="CoreMotApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
-                        <segue destination="SvF-Js-zvg" kind="relationship" relationship="masterViewController" id="bMv-Ta-5bs"/>
+                        <segue destination="VVb-nt-lOC" kind="relationship" relationship="masterViewController" id="bMv-Ta-5bs"/>
                         <segue destination="sTP-eq-VTx" kind="relationship" relationship="detailViewController" id="waA-8d-BG5"/>
                     </connections>
                 </splitViewController>
@@ -663,19 +663,20 @@
                             <outlet property="delegate" destination="SvF-Js-zvg" id="3X0-tI-Oib"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="tuP-Nm-1C7">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="eXS-T3-Otk">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="tuP-Nm-1C7">
                             <connections>
                                 <segue destination="E6l-xT-6kE" kind="unwind" identifier="UnwindToGyro" unwindAction="unwindToGyroWithSegue:" id="E5F-HX-3XZ"/>
                             </connections>
                         </barButtonItem>
-                    </toolbarItems>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xoY-PM-XSI" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="E6l-xT-6kE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="5356" y="908"/>
+            <point key="canvasLocation" x="6295.1999999999998" y="907.1964017991005"/>
         </scene>
         <!--Sessions-->
         <scene sceneID="mxs-Uq-kOv">
@@ -695,6 +696,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yqd-Vd-fZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="822" y="2231"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Rbk-6L-PWo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VVb-nt-lOC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uEF-iP-XXQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SvF-Js-zvg" kind="relationship" relationship="rootViewController" id="5oA-T6-seM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yy1-bc-gqz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5356" y="907.1964017991005"/>
         </scene>
     </scenes>
     <resources>

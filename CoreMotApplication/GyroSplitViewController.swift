@@ -16,6 +16,7 @@ class GyroSplitViewController: UISplitViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        (self.viewControllers.first as! MoreDetailGyroTableViewController).Values = self.Values
     }
 
     override func didReceiveMemoryWarning() {

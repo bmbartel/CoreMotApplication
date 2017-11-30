@@ -9,6 +9,8 @@
 import UIKit
 import JBChart
 
+// Need a way for the data being sent to the split view controller to be seen in this ploting VC as well as the master table view controller. Also, need to get the UIButton send back feature to work. However, it is not in a navigation view anymore so this may be a problem.
+
 class PlottingGyroViewController: UIViewController, JBLineChartViewDelegate, JBLineChartViewDataSource {
 
     // The values will be brought in when imported
