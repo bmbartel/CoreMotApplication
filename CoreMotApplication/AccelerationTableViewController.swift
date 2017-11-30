@@ -17,6 +17,7 @@ class AccelerationTableViewController: UITableViewController {
     var buttonSelected = ""
     let interval = 0.1
     var motionTimer : Timer?
+    
     // If the current value changes, and the count is less than 100, it will reload the data. If it is equal to 100, then the array is full and it will segue to MoreDetail: Just showing the last 100 values in an alternate view.
     var currentValue = [0.0] {
         didSet {
@@ -51,22 +52,26 @@ class AccelerationTableViewController: UITableViewController {
         }
         
         // create and start timer with handler block that updates labels in the view
-        self.motionTimer = Timer(fire: Date(), interval: self.interval, repeats: true, block: {(motionTimer) in
-            // This switch statement makes it so that we insert the acceleration value, in m/s^2, to the array. This value will be x,y, or z dependent on the buttonSelected on the previous view.
-            if let data = self.motionManager.deviceMotion {
-                switch self.buttonSelected {
-                case "X Accel":
-                    self.currentValue.insert(data.userAcceleration.x * 9.81, at: 0)
-                case "Y Accel":
-                    self.currentValue.insert(data.userAcceleration.y * 9.81, at: 0)
-                case "Z Accel":
-                    self.currentValue.insert(data.userAcceleration.z * 9.81, at: 0)
-                default:
-                    print("Missed Value")
+        if #available(iOS 10.0, *) {
+            self.motionTimer = Timer(fire: Date(), interval: self.interval, repeats: true, block: {(motionTimer) in
+                // This switch statement makes it so that we insert the acceleration value, in m/s^2, to the array. This value will be x,y, or z dependent on the buttonSelected on the previous view.
+                if let data = self.motionManager.deviceMotion {
+                    switch self.buttonSelected {
+                    case "X Accel":
+                        self.currentValue.insert(data.userAcceleration.x * 9.81, at: 0)
+                    case "Y Accel":
+                        self.currentValue.insert(data.userAcceleration.y * 9.81, at: 0)
+                    case "Z Accel":
+                        self.currentValue.insert(data.userAcceleration.z * 9.81, at: 0)
+                    default:
+                        print("Missed Value")
+                    }
                 }
             }
+            )
+        } else {
+            // Fallback on earlier versions
         }
-        )
         
         
         
@@ -90,7 +95,7 @@ class AccelerationTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         // check if we're able to sense device motion
-        if motionManager.isDeviceMotionAvailable {
+         if motionManager.isDeviceMotionAvailable, #available(iOS 10.0, *)  {
             //prime motion variables
             self.motionSetup()
             

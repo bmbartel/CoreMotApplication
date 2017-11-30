@@ -50,21 +50,26 @@ class GyroTableViewController: UITableViewController {
         }
         
         // create and start timer with handler block that updates labels in the view
-        self.motionTimer = Timer(fire: Date(), interval: self.interval, repeats: true, block: {(motionTimer) in
-            if let data = self.motionManager.deviceMotion {
-                switch self.buttonSelected {
-                case "Pitch":
-                    self.currentValue.insert(data.attitude.pitch * 180/Double.pi, at: 0)
-                case "Roll":
-                    self.currentValue.insert(data.attitude.roll * 180/Double.pi, at: 0)
-                case "Yaw":
-                    self.currentValue.insert(data.attitude.yaw * 180/Double.pi, at: 0)
-                default:
-                    print("Missed Value")
+        if #available(iOS 10.0, *) {
+            self.motionTimer = Timer(fire: Date(), interval: self.interval, repeats: true, block: {(motionTimer) in
+                if let data = self.motionManager.deviceMotion {
+                    switch self.buttonSelected {
+                        // Add 180 to every value to make positive between 0-360.
+                    case "Pitch":
+                        self.currentValue.insert((data.attitude.pitch * 180/Double.pi) + 180, at: 0)
+                    case "Roll":
+                        self.currentValue.insert((data.attitude.roll * 180/Double.pi) + 180, at: 0)
+                    case "Yaw":
+                        self.currentValue.insert((data.attitude.yaw * 180/Double.pi) + 180, at: 0)
+                    default:
+                        print("Missed Value")
+                    }
                 }
             }
+            )
+        } else {
+            presentAlert(title: "Error", message: "Device Motion is not available.")
         }
-        )
         
         
         
@@ -92,7 +97,7 @@ class GyroTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         // check if we're able to sense device motion
-        if motionManager.isDeviceMotionAvailable {
+         if motionManager.isDeviceMotionAvailable, #available(iOS 10.0, *)  {
             //prime motion variables
             self.motionSetup()
             
@@ -174,8 +179,9 @@ class GyroTableViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let SplitVC = segue.destination as! MoreDetailTableViewController
+        let SplitVC = segue.destination as! GyroSplitViewController
         SplitVC.sensorType = "Gyro"
+        
         SplitVC.Values = self.currentValue
         self.motionManager.stopDeviceMotionUpdates()
     }

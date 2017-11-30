@@ -32,4 +32,5 @@ class GyroTabViewController: UIViewController {
         destVC.buttonSelected = buttonSelected.self!
         
 }
+    @IBAction func unwindToGyro(segue:UIStoryboardSegue) {}
 }
