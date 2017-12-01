@@ -20,12 +20,15 @@ class GyroTableViewController: UITableViewController {
     var motionTimer : Timer?
     var currentValue = [0.0] {
         didSet {
-            if currentValue.count < 100
+            if currentValue.count < 101
             {
                 tableView.reloadData()
             }
-            if currentValue.count == 100
+            if currentValue.count == 101
             {
+                // Get rid of the first value (0).
+                self.currentValue.remove(at: 100)
+                // Then perform the segue.
                 performSegue(withIdentifier: "MoreDetailGyro", sender: self)
             }
         }
@@ -53,6 +56,7 @@ class GyroTableViewController: UITableViewController {
         if #available(iOS 10.0, *) {
             self.motionTimer = Timer(fire: Date(), interval: self.interval, repeats: true, block: {(motionTimer) in
                 if let data = self.motionManager.deviceMotion {
+                    
                     switch self.buttonSelected {
                         // Add 180 to every value to make positive between 0-360.
                     case "Pitch":
@@ -181,8 +185,8 @@ class GyroTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let SplitVC = segue.destination as! GyroSplitViewController
         SplitVC.sensorType = "Gyro"
-        
-        SplitVC.Values = self.currentValue
+        SplitVC.buttonSelected = self.buttonSelected
+        SplitVC.Values = Array(currentValue.self.reversed())
         self.motionManager.stopDeviceMotionUpdates()
     }
     
