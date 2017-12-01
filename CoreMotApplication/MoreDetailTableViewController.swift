@@ -15,6 +15,7 @@ class MoreDetailTableViewController: UITableViewController {
     // Initialize variables, so that we can pass values over from the previous views.
     var Values = [0.0]
     var sensorType = ""
+    var buttonSelected = ""
     
     @IBAction func GoBack(_ sender: Any) {
          performSegue(withIdentifier: "UnwindToAccel", sender: self)
@@ -24,7 +25,7 @@ class MoreDetailTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // Maybe conditionally add a button: If the acceleration values are the values being looked at, add a button entitled (Estimate Distance). Then this button will Segue to another view which will plot and display the distance estimates (Split View Controller). Add this button as soon as the program loads. And set-up a performsegue function for this button.
-        
+        navigationItem.title = buttonSelected
     }
     
     override func didReceiveMemoryWarning() {
