@@ -664,7 +664,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="eXS-T3-Otk">
+                    <navigationItem key="navigationItem" title="Gyro Values" id="eXS-T3-Otk">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="tuP-Nm-1C7">
                             <connections>
                                 <segue destination="E6l-xT-6kE" kind="unwind" identifier="UnwindToGyro" unwindAction="unwindToGyroWithSegue:" id="E5F-HX-3XZ"/>

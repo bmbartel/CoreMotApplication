@@ -193,9 +193,11 @@ class AccelerationTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let SplitVC = segue.destination as! MoreDetailTableViewController
         // Send the values in this table view to a segued view. Currently this added view doesn't hold much value. But moving forward, it could be used for data manipulation (i.e. trying to calculate distance). Potentially for the final project.
-        
-        SplitVC.Values = self.currentValue
+       
+        SplitVC.Values = Array(currentValue.self.reversed())
         SplitVC.sensorType = "Accel"
+        SplitVC.buttonSelected = self.buttonSelected
+        
         // Stop the motion manager updates once segue has occured.
         self.motionManager.stopDeviceMotionUpdates()
     }
