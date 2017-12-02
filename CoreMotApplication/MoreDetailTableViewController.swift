@@ -16,6 +16,9 @@ class MoreDetailTableViewController: UITableViewController {
     var Values = [0.0]
     var sensorType = ""
     var buttonSelected = ""
+    var calAvgX = 0.0
+    var calAvgY = 0.0
+    var calAvgZ = 0.0
     
     @IBAction func GoBack(_ sender: Any) {
          performSegue(withIdentifier: "UnwindToAccel", sender: self)
@@ -86,6 +89,11 @@ class MoreDetailTableViewController: UITableViewController {
         
         //Flips the order of the array before sending it. Important for visualization of distance over time.
         destVC.accelerations = Array(Values.self)
+        destVC.calAvgX = self.calAvgX
+        destVC.calAvgY = self.calAvgY
+        destVC.calAvgZ = self.calAvgZ
+        destVC.buttonSelected = self.buttonSelected
+            
         }
     }
 

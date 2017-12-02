@@ -14,6 +14,9 @@ class AccelSplitViewController: UISplitViewController {
     var buttonSelected = ""
     var unitType = "m/s²"
     var absValues = [0.0]
+    var calAvgX = 0.0
+    var calAvgY = 0.0
+    var calAvgZ = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,10 @@ class AccelSplitViewController: UISplitViewController {
         // Do any additional setup after loading the view.
         let navVC = (self.viewControllers.first as! UINavigationController)
         (navVC.viewControllers.first as! MoreDetailTableViewController).Values = self.Values
+        (navVC.viewControllers.first as! MoreDetailTableViewController).calAvgX = self.calAvgX
+        (navVC.viewControllers.first as! MoreDetailTableViewController).calAvgY = self.calAvgY
+        (navVC.viewControllers.first as! MoreDetailTableViewController).calAvgZ = self.calAvgZ
+        
         // For Plotting we are sending the absolute values of the accelerations. 
         (self.viewControllers.last as! PlottingAccelViewController).Values = self.absValues
         (self.viewControllers.last as! PlottingAccelViewController).unitType = self.unitType

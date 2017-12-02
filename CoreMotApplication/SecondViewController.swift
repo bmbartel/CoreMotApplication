@@ -25,6 +25,9 @@ class SecondViewController: UIViewController {
     var xValues = [0.0]
     var yValues = [0.0]
     var zValues = [0.0]
+    var totalX = 0.0
+    var totalY = 0.0
+    var totalZ = 0.0
     
     @IBOutlet weak var metersPerSecChosen: UIButton!
     @IBOutlet weak var centimetersPerSecChosen: UIButton!
@@ -155,7 +158,11 @@ class SecondViewController: UIViewController {
                 if let data = self.motionManager.deviceMotion {
                     // Initially make the setProgress bar equal to 0.
                     self.Calibrate.setProgress(Float(0.0), animated: false)
-                    while self.xValues.count < 101
+                    
+                    self.xValues = [0.0]
+                    self.yValues = [0.0]
+                    self.zValues = [0.0]
+                    while self.xValues.count < 1001
                 {
     
                                 self.runningAveragex = self.xValues.last!
@@ -164,25 +171,15 @@ class SecondViewController: UIViewController {
                         self.yValues.append((self.runningAveragey + (data.userAcceleration.y * 9.81)))
                          self.zValues.append((self.runningAveragez + (data.userAcceleration.z * 9.81)))
                     
-                    self.Calibrate.setProgress(Float(self.xValues.count/100), animated: true)
+                    self.Calibrate.setProgress(Float(self.xValues.count/1000), animated: true)
+                    
+                    // Take the last value of the running sum of accelerations, divide by the number of values in the matrix, we then have the theoretical drift. However, we may still need to implement a delay in here.
+                    
+                    self.calAvgX = self.xValues.last! / Double(self.xValues.count)
+                    self.calAvgY = self.yValues.last! / Double(self.yValues.count)
+                    self.calAvgZ = self.zValues.last! / Double(self.zValues.count)
                     
                             }
-                    
-                    if self.xValues.count == 100
-                    {
-                        self.motionManager.stopDeviceMotionUpdates()
-                        self.motionTimer?.invalidate()
-                        self.xValues.remove(at: 0)
-                        self.calAvgX = self.xValues.reduce(0, +) / 100.0
-                        self.calAvgY = self.yValues.reduce(0, +) / 100.0
-                        self.calAvgZ = self.zValues.reduce(0, +) / 100.0
-                        print(self.calAvgX)
-                        print(self.calAvgY)
-                        print(self.calAvgZ)
-                        self.xValues = [0.0]
-                        self.yValues = [0.0]
-                        self.zValues = [0.0]
-                    }
                     
                         }
                 else
