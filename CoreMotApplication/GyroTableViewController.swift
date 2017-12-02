@@ -17,6 +17,8 @@ class GyroTableViewController: UITableViewController {
     let motionManager = CMMotionManager()
     var buttonSelected = ""
     let interval = 0.1
+    var chosenUnit = 1.0
+    var unitType = ""
     var motionTimer : Timer?
     var currentValue = [0.0] {
         didSet {
@@ -60,11 +62,11 @@ class GyroTableViewController: UITableViewController {
                     switch self.buttonSelected {
                         // Add 180 to every value to make positive between 0-360.
                     case "Pitch":
-                        self.currentValue.insert((data.attitude.pitch * 180/Double.pi) + 180, at: 0)
+                        self.currentValue.insert(((data.attitude.pitch * 180/Double.pi) + 180) * self.chosenUnit, at: 0)
                     case "Roll":
-                        self.currentValue.insert((data.attitude.roll * 180/Double.pi) + 180, at: 0)
+                        self.currentValue.insert(((data.attitude.roll * 180/Double.pi) + 180) * self.chosenUnit, at: 0)
                     case "Yaw":
-                        self.currentValue.insert((data.attitude.yaw * 180/Double.pi) + 180, at: 0)
+                        self.currentValue.insert(((data.attitude.yaw * 180/Double.pi) + 180) * self.chosenUnit, at: 0)
                     default:
                         print("Missed Value")
                     }
@@ -187,6 +189,7 @@ class GyroTableViewController: UITableViewController {
         SplitVC.sensorType = "Gyro"
         SplitVC.buttonSelected = self.buttonSelected
         SplitVC.Values = Array(currentValue.self.reversed())
+        SplitVC.unitType = unitType.self
         self.motionManager.stopDeviceMotionUpdates()
     }
     

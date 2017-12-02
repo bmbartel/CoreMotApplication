@@ -11,6 +11,8 @@ import CoreMotion
 
 class SecondViewController: UIViewController {
     
+    var chosenAccelUnit = 9.81
+    var accelUnitType = "m/s²"
     let motionManager = CMMotionManager()
     let interval = 0.1
     var motionTimer : Timer?
@@ -24,6 +26,11 @@ class SecondViewController: UIViewController {
     var yValues = [0.0]
     var zValues = [0.0]
     
+    @IBOutlet weak var metersPerSecChosen: UIButton!
+    @IBOutlet weak var centimetersPerSecChosen: UIButton!
+    @IBOutlet weak var feetPerSecChosen: UIButton!
+    @IBOutlet weak var inchesPerSecChosen: UIButton!
+    
     @IBOutlet weak var Calibrate: UIProgressView!
     
     
@@ -31,11 +38,49 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        metersPerSecChosen.backgroundColor = UIColor.darkGray
+        centimetersPerSecChosen.backgroundColor = UIColor.lightGray
+        feetPerSecChosen.backgroundColor = UIColor.lightGray
+        inchesPerSecChosen.backgroundColor = UIColor.lightGray
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func metersPerSecChosen(_ sender: UIButton) {
+        chosenAccelUnit = 1.0
+        accelUnitType = "m/s²"
+        metersPerSecChosen.backgroundColor = UIColor.darkGray
+        centimetersPerSecChosen.backgroundColor = UIColor.lightGray
+        feetPerSecChosen.backgroundColor = UIColor.lightGray
+        inchesPerSecChosen.backgroundColor = UIColor.lightGray
+    }
+    @IBAction func centimetersPerSecChosen(_ sender: UIButton) {
+        chosenAccelUnit = 100
+        accelUnitType = "cm/s²"
+        metersPerSecChosen.backgroundColor = UIColor.lightGray
+        centimetersPerSecChosen.backgroundColor = UIColor.darkGray
+        feetPerSecChosen.backgroundColor = UIColor.lightGray
+        inchesPerSecChosen.backgroundColor = UIColor.lightGray
+    }
+    @IBAction func feetPerSecChosen(_ sender: UIButton) {
+        chosenAccelUnit = 3.280839895013
+        accelUnitType = "ft/s²"
+        metersPerSecChosen.backgroundColor = UIColor.lightGray
+        centimetersPerSecChosen.backgroundColor = UIColor.lightGray
+        feetPerSecChosen.backgroundColor = UIColor.darkGray
+        inchesPerSecChosen.backgroundColor = UIColor.lightGray
+    }
+    @IBAction func inchesPerSecChosen(_ sender: UIButton) {
+        chosenAccelUnit = 39.3700787401
+        accelUnitType = "in/s²"
+        metersPerSecChosen.backgroundColor = UIColor.lightGray
+        centimetersPerSecChosen.backgroundColor = UIColor.lightGray
+        feetPerSecChosen.backgroundColor = UIColor.lightGray
+        inchesPerSecChosen.backgroundColor = UIColor.darkGray
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -167,6 +212,8 @@ class SecondViewController: UIViewController {
         destVC.calAvgX = calAvgX.self
         destVC.calAvgY = calAvgX.self
         destVC.calAvgZ = calAvgX.self
+        destVC.chosenAccelUnit = self.chosenAccelUnit
+        destVC.accelUnitType = self.accelUnitType
     
        
         

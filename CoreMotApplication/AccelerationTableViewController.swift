@@ -20,6 +20,8 @@ class AccelerationTableViewController: UITableViewController {
     var calAvgX = 0.0
     var calAvgY = 0.0
     var calAvgZ = 0.0
+    var accelUnitType = ""
+    var chosenAccelUnit = 9.81
     
     // If the current value changes, and the count is less than 100, it will reload the data. If it is equal to 100, then the array is full and it will segue to MoreDetail: Just showing the last 100 values in an alternate view.
     var currentValue = [0.0] {
@@ -64,11 +66,11 @@ class AccelerationTableViewController: UITableViewController {
                 if let data = self.motionManager.deviceMotion {
                     switch self.buttonSelected {
                     case "X Accel":
-                        self.currentValue.insert(data.userAcceleration.x * 9.81, at: 0)
+                        self.currentValue.insert((data.userAcceleration.x * 9.81) * self.chosenAccelUnit, at: 0)
                     case "Y Accel":
-                        self.currentValue.insert(data.userAcceleration.y * 9.81, at: 0)
+                        self.currentValue.insert((data.userAcceleration.y * 9.81) * self.chosenAccelUnit, at: 0)
                     case "Z Accel":
-                        self.currentValue.insert(data.userAcceleration.z * 9.81, at: 0)
+                        self.currentValue.insert((data.userAcceleration.z * 9.81) * self.chosenAccelUnit, at: 0)
                     default:
                         print("Missed Value")
                     }
@@ -166,7 +168,7 @@ class AccelerationTableViewController: UITableViewController {
         // Setting threshold for the current value. If the acceleration is greater than or equal to 5 m/s^2, then the phone is definitely in motion.
         if abs(currentValue[indexPath.row]) >= 5
         {
-            cell.textLabel?.textColor = UIColor.green
+            cell.textLabel?.textColor = UIColor.black
         }
         else
         {
