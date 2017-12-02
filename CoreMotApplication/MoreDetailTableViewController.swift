@@ -67,7 +67,7 @@ class MoreDetailTableViewController: UITableViewController {
   
             if abs(Values[indexPath.row]) >= 5
             {
-                cell.textLabel?.textColor = UIColor.green
+                cell.textLabel?.textColor = UIColor.black
             }
             else
             {
