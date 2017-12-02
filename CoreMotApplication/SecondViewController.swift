@@ -20,10 +20,6 @@ class SecondViewController: UIViewController {
     var runningAveragex = 0.0
     var runningAveragey = 0.0
     var runningAveragez = 0.0
-    var xAcceleration = 0.0
-    var yAcceleration = 0.0
-    var zAcceleration = 0.0
-    var i = Array(0...100)
     var xValues = [0.0]
     var yValues = [0.0]
     var zValues = [0.0]
@@ -93,53 +89,73 @@ class SecondViewController: UIViewController {
     // if button is pressed
     
     @IBAction func CalibrateData(_ sender: Any) {
-    
-                for sample in i
+        
+        if motionManager.isDeviceMotionAvailable, #available(iOS 10.0, *)  {
+            
+            //prime motion variables
+            self.motionSetup()
+            // start getting motion data
+            self.startMotionTimer()
+        }
+            
+        else {
+            // pop up with error
+            presentAlert(title: "Error", message: "Device Motion is not available.")
+        }
+        
+        
+        if #available(iOS 10.0, *) {
+            self.motionTimer = Timer(fire: Date(), interval: self.interval, repeats: true, block: {(motionTimer) in
+                // This switch statement makes it so that we insert the acceleration value, in m/s^2, to the array. This value will be x,y, or z dependent on the buttonSelected on the previous view.
+                if let data = self.motionManager.deviceMotion {
+                    // Initially make the setProgress bar equal to 0.
+                    self.Calibrate.setProgress(Float(0.0), animated: false)
+                    while self.xValues.count < 101
                 {
+    
+                                self.runningAveragex = self.xValues.last!
+                            
+                        self.xValues.append((self.runningAveragex + (data.userAcceleration.x * 9.81)))
+                        self.yValues.append((self.runningAveragey + (data.userAcceleration.y * 9.81)))
+                         self.zValues.append((self.runningAveragez + (data.userAcceleration.z * 9.81)))
                     
-                    if motionManager.isDeviceMotionAvailable, #available(iOS 10.0, *)  {
-                        
-                        //prime motion variables
-                        self.motionSetup()
-                        
-                        // start getting motion data
-                        self.startMotionTimer()
-                    } else {
-                        // pop up with error
-                        presentAlert(title: "Error", message: "Device Motion is not available.")
-                    }
+                    self.Calibrate.setProgress(Float(self.xValues.count/100), animated: true)
                     
+                            }
                     
-                    
-                    if let data = self.motionManager.deviceMotion {
-                        
-                        self.xValues.insert((self.runningAveragex + (data.userAcceleration.x * 9.81)), at: 0)
-                        self.yValues.insert((self.runningAveragey + (data.userAcceleration.y * 9.81)), at: 0)
-                         self.zValues.insert((self.runningAveragez + (data.userAcceleration.z * 9.81)), at: 0)
-                        
-                    }
-                    
-                    if sample == 100
+                    if self.xValues.count == 100
                     {
-                        calAvgX = runningAveragex / 100
-                        calAvgY = runningAveragey / 100
-                        calAvgZ = runningAveragez / 100
-                        
-                        print()
-                        
                         self.motionManager.stopDeviceMotionUpdates()
                         self.motionTimer?.invalidate()
+                        self.xValues.remove(at: 0)
+                        self.calAvgX = self.xValues.reduce(0, +) / 100
+                        self.calAvgY = self.yValues.reduce(0, +) / 100
+                        self.calAvgZ = self.zValues.reduce(0, +) / 100
+                        print(self.calAvgX)
+                        print(self.calAvgY)
+                        print(self.calAvgZ)
+                        self.xValues = [0.0]
+                        self.yValues = [0.0]
+                        self.zValues = [0.0]
                     }
                     
+                        }
+                else
+                {
+                    // Nothing.
                 }
+            })}
+                    
+                    // add the timer to our run loop
+                    RunLoop.current.add(self.motionTimer!, forMode: .defaultRunLoopMode)
         
+                }
+    
+
 
         // Progress Bar based upon i
-        
-        
-        
-    //RunLoop.current.add(self.motionTimer!, forMode: .defaultRunLoopMode)
-        }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
