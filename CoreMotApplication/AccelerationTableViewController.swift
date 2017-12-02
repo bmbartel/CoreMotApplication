@@ -15,7 +15,7 @@ class AccelerationTableViewController: UITableViewController {
     // Defining variables. motionManager needs to be setup so that we can call it later in the code.
     let motionManager = CMMotionManager()
     var buttonSelected = ""
-    var chosenAccelUnit = 0.0
+    var chosenAccelUnit = 9.81
     var accelUnitType = ""
     let interval = 0.1
     var motionTimer : Timer?

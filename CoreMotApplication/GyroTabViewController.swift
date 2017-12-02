@@ -12,8 +12,8 @@ import UIKit
 // This is essentially the same as SecondViewController, However, this prepares for the gyro data.
 class GyroTabViewController: UIViewController {
     
-    var chosenUnit = 0.0
-    var unitType = ""
+    var chosenUnit = 1.0
+    var unitType = "degrees"
 
     @IBOutlet weak var degreeChosen: UIButton!
     @IBOutlet weak var radianChosen: UIButton!
@@ -32,14 +32,14 @@ class GyroTabViewController: UIViewController {
     
     @IBAction func degreeChosen(_ sender: UIButton) {
         chosenUnit = 1.0
-        unitType = "Degrees"
+        unitType = "degrees"
         degreeChosen.backgroundColor = UIColor.darkGray
         radianChosen.backgroundColor = UIColor.lightGray
     }
     
     @IBAction func radianChosen(_ sender: UIButton) {
         chosenUnit = 0.017453292519
-        unitType = "Radians"
+        unitType = "radians"
         degreeChosen.backgroundColor = UIColor.lightGray
         radianChosen.backgroundColor = UIColor.darkGray
     }

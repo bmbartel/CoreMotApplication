@@ -16,7 +16,7 @@ class GyroTableViewController: UITableViewController {
     
     let motionManager = CMMotionManager()
     var buttonSelected = ""
-    var chosenUnit = 0.0
+    var chosenUnit = 1.0
     var unitType = ""
     let interval = 0.1
     var motionTimer : Timer?

@@ -11,8 +11,8 @@ import UIKit
 // In this view controller, the user is able to select
 class SecondViewController: UIViewController {
     
-    var chosenAccelUnit = 0.0
-    var accelUnitType = ""
+    var chosenAccelUnit = 9.81
+    var accelUnitType = "m/s²"
     
     @IBOutlet weak var metersPerSecChosen: UIButton!
     @IBOutlet weak var centimetersPerSecChosen: UIButton!
@@ -35,7 +35,7 @@ class SecondViewController: UIViewController {
     }
     @IBAction func metersPerSecChosen(_ sender: UIButton) {
         chosenAccelUnit = 1.0
-        accelUnitType = "Meters"
+        accelUnitType = "m/s²"
         metersPerSecChosen.backgroundColor = UIColor.darkGray
         centimetersPerSecChosen.backgroundColor = UIColor.lightGray
         feetPerSecChosen.backgroundColor = UIColor.lightGray
@@ -43,7 +43,7 @@ class SecondViewController: UIViewController {
     }
     @IBAction func centimetersPerSecChosen(_ sender: UIButton) {
         chosenAccelUnit = 100
-        accelUnitType = "Centimeters"
+        accelUnitType = "cm/s²"
         metersPerSecChosen.backgroundColor = UIColor.lightGray
         centimetersPerSecChosen.backgroundColor = UIColor.darkGray
         feetPerSecChosen.backgroundColor = UIColor.lightGray
@@ -51,7 +51,7 @@ class SecondViewController: UIViewController {
     }
     @IBAction func feetPerSecChosen(_ sender: UIButton) {
         chosenAccelUnit = 3.280839895013
-        accelUnitType = "Feet"
+        accelUnitType = "ft/s²"
         metersPerSecChosen.backgroundColor = UIColor.lightGray
         centimetersPerSecChosen.backgroundColor = UIColor.lightGray
         feetPerSecChosen.backgroundColor = UIColor.darkGray
@@ -59,7 +59,7 @@ class SecondViewController: UIViewController {
     }
     @IBAction func inchesPerSecChosen(_ sender: UIButton) {
         chosenAccelUnit = 39.3700787401
-        accelUnitType = "Inches"
+        accelUnitType = "in/s²"
         metersPerSecChosen.backgroundColor = UIColor.lightGray
         centimetersPerSecChosen.backgroundColor = UIColor.lightGray
         feetPerSecChosen.backgroundColor = UIColor.lightGray
