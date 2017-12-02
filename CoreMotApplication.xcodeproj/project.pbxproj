@@ -468,7 +468,7 @@
 					};
 					CAB099C31FAA5BB5005C5588 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 3JP88862F2;
+						DevelopmentTeam = 42R7M2JEJ2;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -788,6 +788,8 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -837,6 +839,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -847,11 +851,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 3JP88862F2;
+				DEVELOPMENT_TEAM = 42R7M2JEJ2;
 				INFOPLIST_FILE = CoreMotApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ASU.CoreMotApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = ASU.CoreMotionApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CoreMotApplication/CoreMotApplication-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -865,11 +869,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = 3JP88862F2;
+				DEVELOPMENT_TEAM = 42R7M2JEJ2;
 				INFOPLIST_FILE = CoreMotApplication/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ASU.CoreMotApplication;
+				PRODUCT_BUNDLE_IDENTIFIER = ASU.CoreMotionApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "CoreMotApplication/CoreMotApplication-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
