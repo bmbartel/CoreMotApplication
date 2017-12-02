@@ -55,6 +55,8 @@
 		CAB099EA1FAA5BB6005C5588 /* CoreMotApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB099E91FAA5BB6005C5588 /* CoreMotApplicationUITests.swift */; };
 		CAB09A001FB0224B005C5588 /* GyroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB099FF1FB0224B005C5588 /* GyroTableViewController.swift */; };
 		CAB09A021FB02361005C5588 /* GyroTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB09A011FB02361005C5588 /* GyroTabViewController.swift */; };
+		CADD782A1FD34B5C0030D3D2 /* PlottingAccelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD78291FD34B5C0030D3D2 /* PlottingAccelViewController.swift */; };
+		CADD782C1FD34F180030D3D2 /* AccelSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD782B1FD34F180030D3D2 /* AccelSplitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +167,8 @@
 		CAB099EB1FAA5BB6005C5588 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAB099FF1FB0224B005C5588 /* GyroTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GyroTableViewController.swift; sourceTree = "<group>"; };
 		CAB09A011FB02361005C5588 /* GyroTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GyroTabViewController.swift; sourceTree = "<group>"; };
+		CADD78291FD34B5C0030D3D2 /* PlottingAccelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlottingAccelViewController.swift; sourceTree = "<group>"; };
+		CADD782B1FD34F180030D3D2 /* AccelSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelSplitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,10 +299,12 @@
 				CAB099FF1FB0224B005C5588 /* GyroTableViewController.swift */,
 				CAB09A011FB02361005C5588 /* GyroTabViewController.swift */,
 				CA3E2BB11FC61EBA00BFF097 /* GyroSplitViewController.swift */,
+				CADD782B1FD34F180030D3D2 /* AccelSplitViewController.swift */,
 				CA3E2BA51FC6012200BFF097 /* PlottingGyroViewController.swift */,
 				CA3E2B451FC2420A00BFF097 /* SessionsViewController.swift */,
 				CA3E2B471FC254F400BFF097 /* SplitViewsTableViewController.swift */,
 				CAB099CD1FAA5BB5005C5588 /* Main.storyboard */,
+				CADD78291FD34B5C0030D3D2 /* PlottingAccelViewController.swift */,
 				CAB099D01FAA5BB5005C5588 /* Assets.xcassets */,
 				CAB099D21FAA5BB5005C5588 /* LaunchScreen.storyboard */,
 				CAB099D51FAA5BB5005C5588 /* Info.plist */,
@@ -585,6 +591,7 @@
 			files = (
 				CAB09A021FB02361005C5588 /* GyroTabViewController.swift in Sources */,
 				CA3E2BA61FC6012200BFF097 /* PlottingGyroViewController.swift in Sources */,
+				CADD782A1FD34B5C0030D3D2 /* PlottingAccelViewController.swift in Sources */,
 				CAB09A001FB0224B005C5588 /* GyroTableViewController.swift in Sources */,
 				CA3E2B421FBD383500BFF097 /* AccelerationTableViewController.swift in Sources */,
 				CA3E2BB01FC61A9C00BFF097 /* MoreDetailGyroTableViewController.swift in Sources */,
@@ -595,6 +602,7 @@
 				CAB099C81FAA5BB5005C5588 /* AppDelegate.swift in Sources */,
 				CAB099CA1FAA5BB5005C5588 /* FirstViewController.swift in Sources */,
 				CA3E2BB21FC61EBA00BFF097 /* GyroSplitViewController.swift in Sources */,
+				CADD782C1FD34F180030D3D2 /* AccelSplitViewController.swift in Sources */,
 				CA3E2B481FC254F400BFF097 /* SplitViewsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

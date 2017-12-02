@@ -51,7 +51,7 @@ class SecondViewController: UIViewController {
     }
     
     @IBAction func metersPerSecChosen(_ sender: UIButton) {
-        chosenAccelUnit = 1.0
+        chosenAccelUnit = 9.81
         accelUnitType = "m/s²"
         metersPerSecChosen.backgroundColor = UIColor.darkGray
         centimetersPerSecChosen.backgroundColor = UIColor.lightGray
@@ -59,7 +59,7 @@ class SecondViewController: UIViewController {
         inchesPerSecChosen.backgroundColor = UIColor.lightGray
     }
     @IBAction func centimetersPerSecChosen(_ sender: UIButton) {
-        chosenAccelUnit = 100
+        chosenAccelUnit = 981
         accelUnitType = "cm/s²"
         metersPerSecChosen.backgroundColor = UIColor.lightGray
         centimetersPerSecChosen.backgroundColor = UIColor.darkGray
@@ -67,7 +67,7 @@ class SecondViewController: UIViewController {
         inchesPerSecChosen.backgroundColor = UIColor.lightGray
     }
     @IBAction func feetPerSecChosen(_ sender: UIButton) {
-        chosenAccelUnit = 3.280839895013
+        chosenAccelUnit = 32.18503937
         accelUnitType = "ft/s²"
         metersPerSecChosen.backgroundColor = UIColor.lightGray
         centimetersPerSecChosen.backgroundColor = UIColor.lightGray
@@ -75,7 +75,7 @@ class SecondViewController: UIViewController {
         inchesPerSecChosen.backgroundColor = UIColor.lightGray
     }
     @IBAction func inchesPerSecChosen(_ sender: UIButton) {
-        chosenAccelUnit = 39.3700787401
+        chosenAccelUnit = 386.2204764
         accelUnitType = "in/s²"
         metersPerSecChosen.backgroundColor = UIColor.lightGray
         centimetersPerSecChosen.backgroundColor = UIColor.lightGray
@@ -173,9 +173,9 @@ class SecondViewController: UIViewController {
                         self.motionManager.stopDeviceMotionUpdates()
                         self.motionTimer?.invalidate()
                         self.xValues.remove(at: 0)
-                        self.calAvgX = self.xValues.reduce(0, +) / 100
-                        self.calAvgY = self.yValues.reduce(0, +) / 100
-                        self.calAvgZ = self.zValues.reduce(0, +) / 100
+                        self.calAvgX = self.xValues.reduce(0, +) / 100.0
+                        self.calAvgY = self.yValues.reduce(0, +) / 100.0
+                        self.calAvgZ = self.zValues.reduce(0, +) / 100.0
                         print(self.calAvgX)
                         print(self.calAvgY)
                         print(self.calAvgZ)
