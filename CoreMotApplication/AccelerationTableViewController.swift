@@ -212,6 +212,9 @@ class AccelerationTableViewController: UITableViewController {
         SplitVC.buttonSelected = self.buttonSelected
         SplitVC.unitType = self.accelUnitType
         SplitVC.absValues = Array(absCurrentValue.self.reversed())
+        SplitVC.calAvgX = self.calAvgX
+        SplitVC.calAvgY = self.calAvgY
+        SplitVC.calAvgZ = self.calAvgZ
         // Stop the motion manager updates once segue has occured.
         
     }

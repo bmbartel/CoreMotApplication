@@ -13,18 +13,36 @@ class DistanceTableViewController: UITableViewController {
     var accelerations = [0.0]
     var LastDistanceValue = 0.0
     var distanceValues = [Double]()
+    var calAvgX = 0.0
+    var calAvgY = 0.0
+    var calAvgZ = 0.0
+    var buttonSelected = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         for i in accelerations
         {
-        let tempValue = abs(i)/100.0 + LastDistanceValue
-        distanceValues.append(tempValue)
-        LastDistanceValue = tempValue
+            
+            switch self.buttonSelected {
+            case "X Accel":
+            let tempValue = abs(i-calAvgX)/100.0 + LastDistanceValue
+            distanceValues.append(tempValue)
+            LastDistanceValue = tempValue
+            case "Y Accel":
+                let tempValue = abs(i-calAvgY)/100.0 + LastDistanceValue
+                distanceValues.append(tempValue)
+                LastDistanceValue = tempValue
+            case "Z Accel":
+              let tempValue = abs(i-calAvgZ)/100.0 + LastDistanceValue
+              distanceValues.append(tempValue)
+              LastDistanceValue = tempValue
+            default:
+                print("Missed Value")
+            
         }
     }
-
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
