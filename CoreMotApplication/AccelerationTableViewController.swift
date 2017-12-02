@@ -20,10 +20,11 @@ class AccelerationTableViewController: UITableViewController {
     var calAvgX = 0.0
     var calAvgY = 0.0
     var calAvgZ = 0.0
-    var accelUnitType = ""
+    var accelUnitType = "m/s²"
     var chosenAccelUnit = 9.81
     
     // If the current value changes, and the count is less than 100, it will reload the data. If it is equal to 100, then the array is full and it will segue to MoreDetail: Just showing the last 100 values in an alternate view.
+    var absCurrentValue = [0.0]
     var currentValue = [0.0] {
         didSet {
             if currentValue.count < 101
@@ -35,6 +36,7 @@ class AccelerationTableViewController: UITableViewController {
                 self.motionManager.stopDeviceMotionUpdates()
                 self.motionTimer?.invalidate()
                 self.currentValue.remove(at: 100)
+                self.absCurrentValue.remove(at: 100)
                 performSegue(withIdentifier: "MoreDetail", sender: self)
             }
         }
@@ -66,11 +68,14 @@ class AccelerationTableViewController: UITableViewController {
                 if let data = self.motionManager.deviceMotion {
                     switch self.buttonSelected {
                     case "X Accel":
-                        self.currentValue.insert((data.userAcceleration.x * 9.81) * self.chosenAccelUnit, at: 0)
+                        self.absCurrentValue.insert((abs(data.userAcceleration.x) * self.chosenAccelUnit), at: 0)
+                        self.currentValue.insert((data.userAcceleration.x * self.chosenAccelUnit), at: 0)
                     case "Y Accel":
-                        self.currentValue.insert((data.userAcceleration.y * 9.81) * self.chosenAccelUnit, at: 0)
+                        self.absCurrentValue.insert((abs(data.userAcceleration.y) * self.chosenAccelUnit), at: 0)
+                        self.currentValue.insert((data.userAcceleration.y * self.chosenAccelUnit), at: 0)
                     case "Z Accel":
-                        self.currentValue.insert((data.userAcceleration.z * 9.81) * self.chosenAccelUnit, at: 0)
+                        self.absCurrentValue.insert((abs(data.userAcceleration.z) * self.chosenAccelUnit), at: 0)
+                        self.currentValue.insert((data.userAcceleration.z * self.chosenAccelUnit), at: 0)
                     default:
                         print("Missed Value")
                     }
@@ -199,13 +204,14 @@ class AccelerationTableViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let SplitVC = segue.destination as! MoreDetailTableViewController
+        let SplitVC = segue.destination as! AccelSplitViewController
         // Send the values in this table view to a segued view. Currently this added view doesn't hold much value. But moving forward, it could be used for data manipulation (i.e. trying to calculate distance). Potentially for the final project.
        
         SplitVC.Values = Array(currentValue.self.reversed())
         SplitVC.sensorType = "Accel"
         SplitVC.buttonSelected = self.buttonSelected
-        
+        SplitVC.unitType = self.accelUnitType
+        SplitVC.absValues = Array(absCurrentValue.self.reversed())
         // Stop the motion manager updates once segue has occured.
         
     }
