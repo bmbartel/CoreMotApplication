@@ -21,12 +21,15 @@ class AccelerationTableViewController: UITableViewController {
     // If the current value changes, and the count is less than 100, it will reload the data. If it is equal to 100, then the array is full and it will segue to MoreDetail: Just showing the last 100 values in an alternate view.
     var currentValue = [0.0] {
         didSet {
-            if currentValue.count < 100
+            if currentValue.count < 101
             {
                 tableView.reloadData()
             }
-            if currentValue.count == 100
+            else if currentValue.count == 101
             {
+                self.motionManager.stopDeviceMotionUpdates()
+                self.motionTimer?.invalidate()
+                self.currentValue.remove(at: 100)
                 performSegue(withIdentifier: "MoreDetail", sender: self)
             }
         }
@@ -199,7 +202,7 @@ class AccelerationTableViewController: UITableViewController {
         SplitVC.buttonSelected = self.buttonSelected
         
         // Stop the motion manager updates once segue has occured.
-        self.motionManager.stopDeviceMotionUpdates()
+        
     }
     
     

@@ -11,12 +11,18 @@ import UIKit
 class DistanceTableViewController: UITableViewController {
 
     var accelerations = [0.0]
-    
     var LastDistanceValue = 0.0
+    var distanceValues = [Double]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        for i in accelerations
+        {
+        let tempValue = abs(i)/100.0 + LastDistanceValue
+        distanceValues.append(tempValue)
+        LastDistanceValue = tempValue
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,15 +51,12 @@ class DistanceTableViewController: UITableViewController {
         
         // If we were to add a calibration, we would subtract out the value from the calibration from each of the acceleration values in the below equation. Could make slightly more accurate. 
         
-        let DistanceValues = abs(accelerations[indexPath.row])/100.0 + LastDistanceValue
-        LastDistanceValue = DistanceValues
 
-        // Need to add a few lines to this script to utilize rotational matricies when the phone is rotated during movement. At least account for a rotation around one axis. To do this will be slightly difficult. We may have to do the rotation matrix to the acceleration on the previous tab. Or we could make another tab for calculating distance to utilize this algorithm.
         
         // Multiply by 39.3701 to convert a meter value to inches.
-        cell.textLabel?.text? = String(DistanceValues * 39.3701)
+        cell.textLabel?.text? = String(distanceValues[indexPath.row] * 39.3701)
+        
         return cell
-
     }
 
 

@@ -85,7 +85,7 @@ class MoreDetailTableViewController: UITableViewController {
         let destVC = segue.destination as! DistanceTableViewController
         
         //Flips the order of the array before sending it. Important for visualization of distance over time.
-        destVC.accelerations = Array(Values.self.reversed())
+        destVC.accelerations = Array(Values.self)
         }
     }
 
