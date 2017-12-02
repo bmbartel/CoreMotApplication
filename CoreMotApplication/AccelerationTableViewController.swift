@@ -15,6 +15,8 @@ class AccelerationTableViewController: UITableViewController {
     // Defining variables. motionManager needs to be setup so that we can call it later in the code.
     let motionManager = CMMotionManager()
     var buttonSelected = ""
+    var chosenAccelUnit = 0.0
+    var accelUnitType = ""
     let interval = 0.1
     var motionTimer : Timer?
     
@@ -58,11 +60,11 @@ class AccelerationTableViewController: UITableViewController {
                 if let data = self.motionManager.deviceMotion {
                     switch self.buttonSelected {
                     case "X Accel":
-                        self.currentValue.insert(data.userAcceleration.x * 9.81, at: 0)
+                        self.currentValue.insert((data.userAcceleration.x * 9.81) * self.chosenAccelUnit, at: 0)
                     case "Y Accel":
-                        self.currentValue.insert(data.userAcceleration.y * 9.81, at: 0)
+                        self.currentValue.insert((data.userAcceleration.y * 9.81) * self.chosenAccelUnit, at: 0)
                     case "Z Accel":
-                        self.currentValue.insert(data.userAcceleration.z * 9.81, at: 0)
+                        self.currentValue.insert((data.userAcceleration.z * 9.81) * self.chosenAccelUnit, at: 0)
                     default:
                         print("Missed Value")
                     }
@@ -197,7 +199,7 @@ class AccelerationTableViewController: UITableViewController {
         SplitVC.Values = Array(currentValue.self.reversed())
         SplitVC.sensorType = "Accel"
         SplitVC.buttonSelected = self.buttonSelected
-        
+//        SplitVC.accelUnitType = accelUnitType.self
         // Stop the motion manager updates once segue has occured.
         self.motionManager.stopDeviceMotionUpdates()
     }

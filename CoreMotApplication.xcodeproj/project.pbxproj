@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B2E54E111FD1F4AA00C94378 /* CustomizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E54E101FD1F4AA00C94378 /* CustomizationViewController.swift */; };
 		CA3E2B421FBD383500BFF097 /* AccelerationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E2B411FBD383500BFF097 /* AccelerationTableViewController.swift */; };
 		CA3E2B441FBD391E00BFF097 /* MoreDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E2B431FBD391E00BFF097 /* MoreDetailTableViewController.swift */; };
 		CA3E2B461FC2420A00BFF097 /* SessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA3E2B451FC2420A00BFF097 /* SessionsViewController.swift */; };
@@ -111,7 +110,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B2E54E101FD1F4AA00C94378 /* CustomizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomizationViewController.swift; sourceTree = "<group>"; };
 		CA3E2B411FBD383500BFF097 /* AccelerationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccelerationTableViewController.swift; sourceTree = "<group>"; };
 		CA3E2B431FBD391E00BFF097 /* MoreDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreDetailTableViewController.swift; sourceTree = "<group>"; };
 		CA3E2B451FC2420A00BFF097 /* SessionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionsViewController.swift; sourceTree = "<group>"; };
@@ -301,7 +299,6 @@
 				CA3E2B451FC2420A00BFF097 /* SessionsViewController.swift */,
 				CA3E2B471FC254F400BFF097 /* SplitViewsTableViewController.swift */,
 				CAB099CD1FAA5BB5005C5588 /* Main.storyboard */,
-				B2E54E101FD1F4AA00C94378 /* CustomizationViewController.swift */,
 				CAB099D01FAA5BB5005C5588 /* Assets.xcassets */,
 				CAB099D21FAA5BB5005C5588 /* LaunchScreen.storyboard */,
 				CAB099D51FAA5BB5005C5588 /* Info.plist */,
@@ -588,7 +585,6 @@
 			files = (
 				CAB09A021FB02361005C5588 /* GyroTabViewController.swift in Sources */,
 				CA3E2BA61FC6012200BFF097 /* PlottingGyroViewController.swift in Sources */,
-				B2E54E111FD1F4AA00C94378 /* CustomizationViewController.swift in Sources */,
 				CAB09A001FB0224B005C5588 /* GyroTableViewController.swift in Sources */,
 				CA3E2B421FBD383500BFF097 /* AccelerationTableViewController.swift in Sources */,
 				CA3E2BB01FC61A9C00BFF097 /* MoreDetailGyroTableViewController.swift in Sources */,

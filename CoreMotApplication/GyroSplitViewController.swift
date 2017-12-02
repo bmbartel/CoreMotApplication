@@ -12,6 +12,7 @@ class GyroSplitViewController: UISplitViewController {
     var Values = [0.0]
     var sensorType = ""
     var buttonSelected = ""
+    var unitType = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,7 @@ class GyroSplitViewController: UISplitViewController {
         let navVC = (self.viewControllers.first as! UINavigationController)
         (navVC.viewControllers.first as! MoreDetailGyroTableViewController).Values = self.Values
         (self.viewControllers.last as! PlottingGyroViewController).Values = self.Values
+        (self.viewControllers.last as! PlottingGyroViewController).unitType = self.unitType
         
         (navVC.viewControllers.first as! MoreDetailGyroTableViewController).buttonSelected = self.buttonSelected
     }
