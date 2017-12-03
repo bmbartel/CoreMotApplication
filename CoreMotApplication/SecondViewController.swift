@@ -136,7 +136,7 @@ class SecondViewController: UIViewController {
     
     // if button is pressed
     
-    @IBAction func CalibrateData(_ sender: Any) {
+    @IBAction func CalibrateData(_ sender: UIButton) {
         
         if motionManager.isDeviceMotionAvailable, #available(iOS 10.0, *)  {
             
