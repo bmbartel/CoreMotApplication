@@ -171,7 +171,13 @@ class SecondViewController: UIViewController {
                         self.yValues.append((self.runningAveragey + (data.userAcceleration.y * 9.81)))
                          self.zValues.append((self.runningAveragez + (data.userAcceleration.z * 9.81)))
                     
+                    CATransaction.begin()
+                    CATransaction.setCompletionBlock({
                     self.Calibrate.setProgress(Float(self.xValues.count/1000), animated: true)
+                    })
+                    
+                    self.Calibrate.setProgress(Float(self.xValues.count * 0), animated: false)
+                    CATransaction.commit()
                     
                     // Take the last value of the running sum of accelerations, divide by the number of values in the matrix, we then have the theoretical drift. However, we may still need to implement a delay in here.
                     
