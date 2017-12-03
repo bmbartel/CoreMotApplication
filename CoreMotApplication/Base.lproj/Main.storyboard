@@ -41,7 +41,7 @@
                             <constraint firstAttribute="centerX" secondItem="22h-Oc-xHB" secondAttribute="centerX" id="f3o-dq-Yzu"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="first" id="Qqa-46-KkK"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" id="Qqa-46-KkK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nDS-GD-CGT" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +51,7 @@
         <scene sceneID="UHN-L7-o5B">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y76-o5-tGn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Acceleration" image="first" id="RH8-fs-g67"/>
+                    <tabBarItem key="tabBarItem" title="Acceleration" image="Acceleration" id="RH8-fs-g67"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gWw-Kb-cVi">
                         <autoresizingMask key="autoresizingMask"/>
@@ -502,7 +502,7 @@
         <scene sceneID="vmt-ul-G7H">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8gd-Ma-56b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Gyro" image="first" id="neF-ql-w0x"/>
+                    <tabBarItem key="tabBarItem" title="Gyro" image="Gyro" id="neF-ql-w0x"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f6O-BM-weG">
                         <autoresizingMask key="autoresizingMask"/>
@@ -870,7 +870,7 @@
         <scene sceneID="mxs-Uq-kOv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w3e-lN-bTV" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Sessions" image="first" id="H4z-no-M2C"/>
+                    <tabBarItem key="tabBarItem" title="Sessions" image="Session" id="H4z-no-M2C"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="foP-CY-Els">
                         <autoresizingMask key="autoresizingMask"/>
@@ -1022,7 +1022,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
+        <image name="Acceleration" width="25" height="25"/>
+        <image name="Gyro" width="25" height="25"/>
+        <image name="Home" width="25" height="25"/>
+        <image name="Session" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Hww-Sg-ozZ"/>
