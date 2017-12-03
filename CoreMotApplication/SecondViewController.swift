@@ -41,10 +41,10 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        metersPerSecChosen.backgroundColor = UIColor.darkGray
-        centimetersPerSecChosen.backgroundColor = UIColor.lightGray
-        feetPerSecChosen.backgroundColor = UIColor.lightGray
-        inchesPerSecChosen.backgroundColor = UIColor.lightGray
+        metersPerSecChosen.backgroundColor = UIColor.lightGray
+        centimetersPerSecChosen.backgroundColor = UIColor.groupTableViewBackground
+        feetPerSecChosen.backgroundColor = UIColor.groupTableViewBackground
+        inchesPerSecChosen.backgroundColor = UIColor.groupTableViewBackground
     }
     
     
@@ -56,34 +56,34 @@ class SecondViewController: UIViewController {
     @IBAction func metersPerSecChosen(_ sender: UIButton) {
         chosenAccelUnit = 9.81
         accelUnitType = "m/s²"
-        metersPerSecChosen.backgroundColor = UIColor.darkGray
-        centimetersPerSecChosen.backgroundColor = UIColor.lightGray
-        feetPerSecChosen.backgroundColor = UIColor.lightGray
-        inchesPerSecChosen.backgroundColor = UIColor.lightGray
+        metersPerSecChosen.backgroundColor = UIColor.lightGray
+        centimetersPerSecChosen.backgroundColor = UIColor.groupTableViewBackground
+        feetPerSecChosen.backgroundColor = UIColor.groupTableViewBackground
+        inchesPerSecChosen.backgroundColor = UIColor.groupTableViewBackground
     }
     @IBAction func centimetersPerSecChosen(_ sender: UIButton) {
         chosenAccelUnit = 981
         accelUnitType = "cm/s²"
-        metersPerSecChosen.backgroundColor = UIColor.lightGray
-        centimetersPerSecChosen.backgroundColor = UIColor.darkGray
-        feetPerSecChosen.backgroundColor = UIColor.lightGray
-        inchesPerSecChosen.backgroundColor = UIColor.lightGray
+        metersPerSecChosen.backgroundColor = UIColor.groupTableViewBackground
+        centimetersPerSecChosen.backgroundColor = UIColor.lightGray
+        feetPerSecChosen.backgroundColor = UIColor.groupTableViewBackground
+        inchesPerSecChosen.backgroundColor = UIColor.groupTableViewBackground
     }
     @IBAction func feetPerSecChosen(_ sender: UIButton) {
         chosenAccelUnit = 32.18503937
         accelUnitType = "ft/s²"
-        metersPerSecChosen.backgroundColor = UIColor.lightGray
-        centimetersPerSecChosen.backgroundColor = UIColor.lightGray
-        feetPerSecChosen.backgroundColor = UIColor.darkGray
-        inchesPerSecChosen.backgroundColor = UIColor.lightGray
+        metersPerSecChosen.backgroundColor = UIColor.groupTableViewBackground
+        centimetersPerSecChosen.backgroundColor = UIColor.groupTableViewBackground
+        feetPerSecChosen.backgroundColor = UIColor.lightGray
+        inchesPerSecChosen.backgroundColor = UIColor.groupTableViewBackground
     }
     @IBAction func inchesPerSecChosen(_ sender: UIButton) {
         chosenAccelUnit = 386.2204764
         accelUnitType = "in/s²"
-        metersPerSecChosen.backgroundColor = UIColor.lightGray
-        centimetersPerSecChosen.backgroundColor = UIColor.lightGray
-        feetPerSecChosen.backgroundColor = UIColor.lightGray
-        inchesPerSecChosen.backgroundColor = UIColor.darkGray
+        metersPerSecChosen.backgroundColor = UIColor.groupTableViewBackground
+        centimetersPerSecChosen.backgroundColor = UIColor.groupTableViewBackground
+        feetPerSecChosen.backgroundColor = UIColor.groupTableViewBackground
+        inchesPerSecChosen.backgroundColor = UIColor.lightGray
     }
     
     override func viewDidAppear(_ animated: Bool) {
