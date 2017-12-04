@@ -20,16 +20,6 @@ class SessionsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Data")
@@ -40,8 +30,8 @@ class SessionsViewController: UITableViewController {
             let results = try context.fetch(request)
             if results.count > 0 {
                 for result in results as! [NSManagedObject] {
-                    if let sessionsName = result.value(forKey: "name") as? [Double] {
-                        sessions = sessionsName
+                    if let sessionsName = result.value(forKey: "name") as? Double {
+                        sessions.append(sessionsName)
                         self.tableView.reloadData()
                     }
                 }
@@ -51,6 +41,37 @@ class SessionsViewController: UITableViewController {
         } catch {
             print("error")
         }
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+        
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        let context = appDelegate.persistentContainer.viewContext
+//        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Data")
+//        request.returnsObjectsAsFaults = false
+//
+//
+//        do {
+//            let results = try context.fetch(request)
+//            if results.count > 0 {
+//                for result in results as! [NSManagedObject] {
+//                    if let sessionsName = result.value(forKey: "name") as? Double {
+//                        sessions.append(sessionsName)
+//                        self.tableView.reloadData()
+//                    }
+//                }
+//            } else {
+//                print("no results")
+//            }
+//        } catch {
+//            print("error")
+//        }
     }
     
     override func didReceiveMemoryWarning() {

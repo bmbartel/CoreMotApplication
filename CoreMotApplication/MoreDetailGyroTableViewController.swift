@@ -37,7 +37,7 @@ class MoreDetailGyroTableViewController: UITableViewController {
         let newSession = NSEntityDescription.insertNewObject(forEntityName: "Data", into: context)
         
         
-        valuesToSend = Values
+       // valuesToSend = Values
         nameValuesToSend.insert(nameValue, at: 0)
         newSession.setValue(valuesToSend, forKey: "data")
         newSession.setValue(nameValuesToSend, forKey: "name")
@@ -56,7 +56,9 @@ class MoreDetailGyroTableViewController: UITableViewController {
         }
     }
 
-    
+    override func viewDidAppear(_ animated: Bool) {
+        conditional = false
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
