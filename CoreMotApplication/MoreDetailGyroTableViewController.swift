@@ -26,9 +26,8 @@ class MoreDetailGyroTableViewController: UITableViewController {
     }
     
    
-        
+ 
     @IBAction func saveButton(_ sender: Any) {
-        
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let newSession = NSEntityDescription.insertNewObject(forEntityName: "Data", into: context)
