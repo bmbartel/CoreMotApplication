@@ -547,7 +547,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1000" height="618"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3nq-1L-mL9">
-                                <rect key="frame" x="505" y="154.5" width="485" height="99"/>
+                                <rect key="frame" x="505" y="152" width="485" height="101.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="3nq-1L-mL9" secondAttribute="height" multiplier="172:35" id="Lac-l4-OyU"/>
@@ -561,7 +561,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGc-de-R6u">
-                                <rect key="frame" x="10" y="154.5" width="485" height="99"/>
+                                <rect key="frame" x="10" y="152" width="485" height="101.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eGc-de-R6u" secondAttribute="height" multiplier="172:35" id="rtC-ov-b6q"/>
@@ -597,7 +597,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvS-o4-Smx">
-                                <rect key="frame" x="10" y="444" width="320" height="98.5"/>
+                                <rect key="frame" x="10" y="444" width="320" height="101"/>
                                 <color key="backgroundColor" red="0.97503465410000001" green="0.95679134129999999" blue="0.98232334850000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="MvS-o4-Smx" secondAttribute="height" multiplier="111:35" id="mdY-Ol-bN7"/>
@@ -611,7 +611,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Xj-n3-4xv">
-                                <rect key="frame" x="670.5" y="444" width="319.5" height="98.5"/>
+                                <rect key="frame" x="670.5" y="444" width="319.5" height="101"/>
                                 <color key="backgroundColor" red="0.97503465410000001" green="0.95679134129999999" blue="0.98232334850000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="7Xj-n3-4xv" secondAttribute="height" multiplier="111:35" id="pDC-bV-c2Y"/>
@@ -625,7 +625,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XI8-v9-vTF">
-                                <rect key="frame" x="340.5" y="444" width="320" height="98.5"/>
+                                <rect key="frame" x="340.5" y="444" width="320" height="101"/>
                                 <color key="backgroundColor" red="0.97503465410000001" green="0.95679134129999999" blue="0.98232334850000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="XI8-v9-vTF" secondAttribute="height" multiplier="16:5" id="scZ-2G-MFV"/>
@@ -639,7 +639,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Select Unit of Measurement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="13" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2cF-st-ewR">
-                                <rect key="frame" x="10" y="69.5" width="980" height="80"/>
+                                <rect key="frame" x="10" y="67" width="980" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2cF-st-ewR" secondAttribute="height" multiplier="355:29" id="UF0-X2-6Qs"/>
                                 </constraints>
