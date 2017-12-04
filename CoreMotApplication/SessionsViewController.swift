@@ -11,7 +11,7 @@ import CoreData
 
 class SessionsViewController: UITableViewController {
     
-    var sessions: [String] = []
+    var sessions: [Double] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +21,13 @@ class SessionsViewController: UITableViewController {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Data")
         request.returnsObjectsAsFaults = false
         
+        
         do {
             let results = try context.fetch(request)
             if results.count > 0 {
                 for result in results as! [NSManagedObject] {
-                    if let data = result.value(forKey: "data") as? [String] {
-                        sessions = data
+                    if let sessionsName = result.value(forKey: "name") as? [Double] {
+                        sessions = sessionsName
                         self.tableView.reloadData()
                     }
                 }
@@ -65,7 +66,7 @@ class SessionsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SessionCell", for: indexPath)
         
-        cell.textLabel?.text = sessions[indexPath.row]
+        cell.textLabel?.text = String(sessions[indexPath.row])
         
         return cell
     }

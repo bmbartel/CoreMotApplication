@@ -756,7 +756,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="zaB-RQ-QOn" kind="show" id="pyB-jn-Xst"/>
+                                    <segue destination="fMS-Gi-dK8" kind="show" id="qQJ-38-hLD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -770,51 +770,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uRj-nM-Gcw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1726" y="2231"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="OMa-iH-oRP">
-            <objects>
-                <viewController id="zaB-RQ-QOn" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="rwh-BR-EC3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Units" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWg-h9-pHf">
-                                <rect key="frame" x="166" y="156" width="40" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wml-5G-1TD">
-                                <rect key="frame" x="256" y="82" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Display Value"/>
-                                <connections>
-                                    <segue destination="PNQ-j2-6Sm" kind="show" id="vtb-Fn-Jd3"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="S1S-H5-1tN"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bQv-Gc-t4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2583.1999999999998" y="2232.2338830584708"/>
-        </scene>
-        <!--Split View Controller-->
-        <scene sceneID="tyl-Os-j43">
-            <objects>
-                <splitViewController id="PNQ-j2-6Sm" sceneMemberID="viewController">
-                    <connections>
-                        <segue destination="fMS-Gi-dK8" kind="relationship" relationship="masterViewController" id="dL3-jB-ADQ"/>
-                        <segue destination="eC7-F7-KJU" kind="relationship" relationship="detailViewController" id="35B-LP-ltv"/>
-                    </connections>
-                </splitViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zZk-N1-fCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3481" y="2230"/>
         </scene>
         <!--Plotting Gyro View Controller-->
         <scene sceneID="fNK-4g-lWv">
@@ -939,22 +894,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uOU-7A-tXt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4473" y="2232"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="2Io-SL-B5O">
-            <objects>
-                <viewController id="eC7-F7-KJU" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ti6-tP-ecm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="nOt-qj-bUx"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J7S-8Z-8ba" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4473" y="3113"/>
+            <point key="canvasLocation" x="2668" y="2230"/>
         </scene>
         <!--Gyro-->
         <scene sceneID="y0Z-Pa-Ajo">
