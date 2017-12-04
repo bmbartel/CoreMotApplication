@@ -782,8 +782,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eva-PH-JSa" userLabel="Bottom Labels/Buttons">
                                 <rect key="frame" x="5" y="606.5" width="365" height="55.5"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hover over point to see value in chosen color!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8J-z1-R6W">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="highlightedColor" red="0.83895420440000001" green="0.88561169090000003" blue="0.95745628240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
                                     <stackView opaque="NO" tag="5" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="7U9-4Q-keo" userLabel="Plot Color">
-                                        <rect key="frame" x="0.0" y="0.0" width="365" height="30"/>
+                                        <rect key="frame" x="0.0" y="25.5" width="365" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plot Color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="edl-7A-23X">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
@@ -833,12 +839,6 @@
                                             <constraint firstItem="HYi-OO-PIj" firstAttribute="height" secondItem="edl-7A-23X" secondAttribute="height" id="wDe-77-eZe"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hover over point to see value in chosen color!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8J-z1-R6W">
-                                        <rect key="frame" x="0.0" y="35" width="365" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="highlightedColor" red="0.83895420440000001" green="0.88561169090000003" blue="0.95745628240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="v8J-z1-R6W" firstAttribute="width" secondItem="7U9-4Q-keo" secondAttribute="width" id="qtD-RP-4WL"/>
@@ -1072,8 +1072,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="MBM-VI-ps0" userLabel="All Bottom Label/Buttons">
                                 <rect key="frame" x="5" y="609.5" width="365" height="52.5"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hover over point to see value in chosen color!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kF-hN-Q0l">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="highlightedColor" red="0.83895420440000001" green="0.88561169090000003" blue="0.95745628240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Y0x-gc-3NF" userLabel="Plot Colors">
-                                        <rect key="frame" x="0.0" y="0.0" width="365" height="30"/>
+                                        <rect key="frame" x="0.0" y="22.5" width="365" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plot Color:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUq-tM-fqP">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
@@ -1123,12 +1129,6 @@
                                             <constraint firstItem="oYa-89-0wZ" firstAttribute="width" secondItem="9qd-nH-kIw" secondAttribute="width" id="xwJ-FJ-zXY"/>
                                         </constraints>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hover over point to see value in chosen color!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kF-hN-Q0l">
-                                        <rect key="frame" x="0.0" y="32" width="365" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <color key="highlightedColor" red="0.83895420440000001" green="0.88561169090000003" blue="0.95745628240000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="3kF-hN-Q0l" firstAttribute="width" secondItem="Y0x-gc-3NF" secondAttribute="width" id="KbT-0M-xS9"/>
