@@ -22,22 +22,22 @@ class GyroTabViewController: UIViewController {
     @IBAction func degreeChosen(_ sender: Any) {
         chosenUnit = 1.0
         unitType = "degrees"
-        degreeChosen.backgroundColor = UIColor.darkGray
-        radianChosen.backgroundColor = UIColor.lightGray
+        degreeChosen.backgroundColor = UIColor.lightGray
+        radianChosen.backgroundColor = UIColor.groupTableViewBackground
     }
     
     @IBAction func radianChosen(_ sender: Any) {
         chosenUnit = 0.017453292519
         unitType = "radians"
-        degreeChosen.backgroundColor = UIColor.lightGray
-        radianChosen.backgroundColor = UIColor.darkGray
+        degreeChosen.backgroundColor = UIColor.groupTableViewBackground
+        radianChosen.backgroundColor = UIColor.lightGray
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        degreeChosen.backgroundColor = UIColor.darkGray
-        radianChosen.backgroundColor = UIColor.lightGray
+        degreeChosen.backgroundColor = UIColor.lightGray
+        radianChosen.backgroundColor = UIColor.groupTableViewBackground
     }
     
     override func didReceiveMemoryWarning() {
