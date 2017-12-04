@@ -106,22 +106,29 @@ class PlottingAccelViewController: UIViewController, JBLineChartViewDelegate, JB
         AccelLine.setState(.expanded, animated: true)
     }
     
+    
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidAppear(animated)
         AccelLine.setState(.collapsed, animated: true)
     }
     
-    
-    // If the device orientation changes, reset the state of the plot.
+
+    // If the device orientation changes, reset the state of the plot. -> Doesn't work yet..
     // Below concept for viewWillTransition applied and manipulated from: https://stackoverflow.com/questions/25666269/how-to-detect-orientation-change
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.current.orientation.isLandscape {
+            AccelLine.reloadData()
+            self.viewDidLoad()
+            self.viewDidAppear(true)
+            AccelLine.setState(.expanded, animated: true)
             
-
-            
-        } else {
-            
+        }
+        else {
+            AccelLine.reloadData()
+            self.viewDidLoad()
+            self.viewDidAppear(true)
+            AccelLine.setState(.expanded, animated: true)
         }
     }
     
