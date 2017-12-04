@@ -57,7 +57,7 @@
 		CAB09A021FB02361005C5588 /* GyroTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB09A011FB02361005C5588 /* GyroTabViewController.swift */; };
 		CADD782A1FD34B5C0030D3D2 /* PlottingAccelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD78291FD34B5C0030D3D2 /* PlottingAccelViewController.swift */; };
 		CADD782C1FD34F180030D3D2 /* AccelSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADD782B1FD34F180030D3D2 /* AccelSplitViewController.swift */; };
-		CADD782F1FD500380030D3D2 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CADD782D1FD500380030D3D2 /* Model.xcdatamodeld */; };
+		CADD782F1FD500380030D3D2 /* CoreMotApplication.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CADD782D1FD500380030D3D2 /* CoreMotApplication.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -306,7 +306,7 @@
 				CA3E2B451FC2420A00BFF097 /* SessionsViewController.swift */,
 				CA3E2B471FC254F400BFF097 /* SplitViewsTableViewController.swift */,
 				CAB099CD1FAA5BB5005C5588 /* Main.storyboard */,
-				CADD782D1FD500380030D3D2 /* Model.xcdatamodeld */,
+				CADD782D1FD500380030D3D2 /* CoreMotApplication.xcdatamodeld */,
 				CADD78291FD34B5C0030D3D2 /* PlottingAccelViewController.swift */,
 				CAB099D01FAA5BB5005C5588 /* Assets.xcassets */,
 				CAB099D21FAA5BB5005C5588 /* LaunchScreen.storyboard */,
@@ -603,7 +603,7 @@
 				CA3E2B441FBD391E00BFF097 /* MoreDetailTableViewController.swift in Sources */,
 				CAB099CC1FAA5BB5005C5588 /* SecondViewController.swift in Sources */,
 				CAB099C81FAA5BB5005C5588 /* AppDelegate.swift in Sources */,
-				CADD782F1FD500380030D3D2 /* Model.xcdatamodeld in Sources */,
+				CADD782F1FD500380030D3D2 /* CoreMotApplication.xcdatamodeld in Sources */,
 				CAB099CA1FAA5BB5005C5588 /* FirstViewController.swift in Sources */,
 				CA3E2BB21FC61EBA00BFF097 /* GyroSplitViewController.swift in Sources */,
 				CADD782C1FD34F180030D3D2 /* AccelSplitViewController.swift in Sources */,
@@ -1015,13 +1015,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		CADD782D1FD500380030D3D2 /* Model.xcdatamodeld */ = {
+		CADD782D1FD500380030D3D2 /* CoreMotApplication.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				CADD782E1FD500380030D3D2 /* Model.xcdatamodel */,
 			);
 			currentVersion = CADD782E1FD500380030D3D2 /* Model.xcdatamodel */;
-			path = Model.xcdatamodeld;
+			path = CoreMotApplication.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

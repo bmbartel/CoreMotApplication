@@ -17,19 +17,28 @@ class MoreDetailGyroTableViewController: UITableViewController {
     var Values = [0.0]
     var sensorType = ""
     var buttonSelected = ""
+    var valuesToSend = [0.0]
+    var nameValue = 0.0
+    var nameValuesToSend: [Double] = []
     
     @IBAction func GoBack(_ sender: Any) {
         performSegue(withIdentifier: "UnwindToGyro", sender: self)
     }
     
+   
+        
     @IBAction func saveButton(_ sender: Any) {
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let newSession = NSEntityDescription.insertNewObject(forEntityName: "Data", into: context)
         
-        //newSession.setValue(input.text!, forKey: "name")
-        newSession.setValue(Values, forKey: "data")
+        
+        valuesToSend = Values
+        nameValuesToSend.insert(nameValue, at: 0)
+        newSession.setValue(valuesToSend, forKey: "data")
+        newSession.setValue(nameValuesToSend, forKey: "name")
+        nameValue = nameValue + 1
         
         do {
             try context.save()
@@ -38,7 +47,6 @@ class MoreDetailGyroTableViewController: UITableViewController {
         }
         
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -80,7 +88,7 @@ class MoreDetailGyroTableViewController: UITableViewController {
         let collectedGyro = Values[indexPath.row]
         
         // Only utilize the thresholding functionality in this tab if we are looking at the accelerometer values. The gyro values will always plot in black.
-
+        
         
         cell.textLabel?.text? = String(collectedGyro)
         
@@ -95,3 +103,5 @@ class MoreDetailGyroTableViewController: UITableViewController {
     
     
 }
+
+
