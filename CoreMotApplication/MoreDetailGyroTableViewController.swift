@@ -20,14 +20,18 @@ class MoreDetailGyroTableViewController: UITableViewController {
     var valuesToSend = [0.0]
     var nameValue = 0.0
     var nameValuesToSend: [Double] = []
+    var conditional = false
+    
     
     @IBAction func GoBack(_ sender: Any) {
         performSegue(withIdentifier: "UnwindToGyro", sender: self)
     }
     
    
- 
+
     @IBAction func saveButton(_ sender: Any) {
+        if (conditional == false)
+        {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let newSession = NSEntityDescription.insertNewObject(forEntityName: "Data", into: context)
@@ -44,8 +48,14 @@ class MoreDetailGyroTableViewController: UITableViewController {
         } catch {
             print("failed to save")
         }
-        
+            conditional = true
     }
+        else
+        {
+            print("Only want one save")
+        }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
