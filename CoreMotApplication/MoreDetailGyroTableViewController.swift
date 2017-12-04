@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 // This view controller will display acceleration(x,y,z) or gyro(roll,pitch,yaw) depending on what the user has navigated to. In this controller, moving forward for the final project, we could attempt to make plots. Potentially change this to a split view controller. And could perform data manipulation to try to estimate distance from acceleration values.
 
@@ -16,10 +17,45 @@ class MoreDetailGyroTableViewController: UITableViewController {
     var Values = [0.0]
     var sensorType = ""
     var buttonSelected = ""
+    var valuesToSend = [0.0]
+    var nameValue = 0.0
+    var nameValuesToSend: [Double] = []
+    var conditional = false
+    
     
     @IBAction func GoBack(_ sender: Any) {
         performSegue(withIdentifier: "UnwindToGyro", sender: self)
     }
+    
+   
+
+    @IBAction func saveButton(_ sender: Any) {
+        if (conditional == false)
+        {
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let newSession = NSEntityDescription.insertNewObject(forEntityName: "Data", into: context)
+        
+        
+        valuesToSend = Values
+        nameValuesToSend.insert(nameValue, at: 0)
+        newSession.setValue(valuesToSend, forKey: "data")
+        newSession.setValue(nameValuesToSend, forKey: "name")
+        nameValue = nameValue + 1
+        
+        do {
+            try context.save()
+        } catch {
+            print("failed to save")
+        }
+            conditional = true
+    }
+        else
+        {
+            print("Only want one save")
+        }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,7 +97,7 @@ class MoreDetailGyroTableViewController: UITableViewController {
         let collectedGyro = Values[indexPath.row]
         
         // Only utilize the thresholding functionality in this tab if we are looking at the accelerometer values. The gyro values will always plot in black.
-
+        
         
         cell.textLabel?.text? = String(collectedGyro)
         
@@ -76,3 +112,5 @@ class MoreDetailGyroTableViewController: UITableViewController {
     
     
 }
+
+
