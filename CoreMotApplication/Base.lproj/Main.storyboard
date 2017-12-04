@@ -36,27 +36,11 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Welcome! " textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wFb-hO-pCu">
-                                <rect key="frame" x="10" y="314.5" width="355" height="38"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="wFb-hO-pCu" secondAttribute="height" multiplier="355:38" id="1mt-sW-4Q1"/>
-                                </constraints>
+                                <rect key="frame" x="10" y="314" width="355" height="38"/>
                                 <color key="textColor" red="1" green="0.9999879599" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="33"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Use the tabs on the bottom to navigate" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="MPl-j2-3aS">
-                                <rect key="frame" x="10" y="353.5" width="355" height="83"/>
-                                <accessibility key="accessibilityConfiguration">
-                                    <accessibilityTraits key="traits" notEnabled="YES"/>
-                                </accessibility>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="MPl-j2-3aS" secondAttribute="height" multiplier="355:83" id="bET-RB-BJx"/>
-                                    <constraint firstAttribute="height" constant="83" id="oy4-mb-jjG"/>
-                                </constraints>
-                                <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="33"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vPV-0b-CLI">
                                 <rect key="frame" x="28" y="232.5" width="318" height="42"/>
                                 <subviews>
@@ -71,24 +55,50 @@
                                     </textField>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="ScV-Ct-TuU" firstAttribute="top" secondItem="vPV-0b-CLI" secondAttribute="top" id="48D-N0-uus"/>
+                                    <constraint firstAttribute="bottom" secondItem="Iwy-NY-Wng" secondAttribute="bottom" id="8vB-B1-V15"/>
+                                    <constraint firstItem="Iwy-NY-Wng" firstAttribute="leading" secondItem="vPV-0b-CLI" secondAttribute="leading" id="ACu-L6-7vx"/>
+                                    <constraint firstItem="ScV-Ct-TuU" firstAttribute="leading" secondItem="Iwy-NY-Wng" secondAttribute="trailing" id="AVd-qo-Tlh"/>
                                     <constraint firstAttribute="width" secondItem="vPV-0b-CLI" secondAttribute="height" multiplier="53:7" id="F2R-Np-V73"/>
+                                    <constraint firstAttribute="bottom" secondItem="ScV-Ct-TuU" secondAttribute="bottom" id="YYk-kZ-gXs"/>
+                                    <constraint firstAttribute="trailing" secondItem="ScV-Ct-TuU" secondAttribute="trailing" id="qWN-u7-dKg"/>
+                                    <constraint firstItem="Iwy-NY-Wng" firstAttribute="top" secondItem="vPV-0b-CLI" secondAttribute="top" id="wiH-me-XUh"/>
                                 </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9gD-D0-nFq">
+                                <rect key="frame" x="10" y="362" width="355" height="76"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Use the tabs on the" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v42-rz-miP">
+                                        <rect key="frame" x="0.0" y="0.0" width="355" height="38"/>
+                                        <color key="textColor" red="1" green="0.9999879599" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="33"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="bottom to navigate." textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yQT-tq-G0h">
+                                        <rect key="frame" x="0.0" y="38" width="355" height="38"/>
+                                        <color key="textColor" red="1" green="0.9999879599" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Cochin" family="Cochin" pointSize="33"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
                             </stackView>
                         </subviews>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wFb-hO-pCu" firstAttribute="top" secondItem="vPV-0b-CLI" secondAttribute="bottom" constant="40" id="AJy-bg-Xoe"/>
-                            <constraint firstItem="wFb-hO-pCu" firstAttribute="centerY" secondItem="ets-ss-u1a" secondAttribute="centerY" id="ALs-z3-8WG"/>
-                            <constraint firstItem="7VF-5h-l06" firstAttribute="trailing" secondItem="MPl-j2-3aS" secondAttribute="trailing" constant="10" id="KCN-xQ-Gd2"/>
+                            <constraint firstItem="9gD-D0-nFq" firstAttribute="width" secondItem="wFb-hO-pCu" secondAttribute="width" id="7FT-NW-wve"/>
+                            <constraint firstItem="7VF-5h-l06" firstAttribute="trailing" secondItem="9gD-D0-nFq" secondAttribute="trailing" constant="10" id="BTC-u2-MTA"/>
+                            <constraint firstItem="wFb-hO-pCu" firstAttribute="top" secondItem="vPV-0b-CLI" secondAttribute="bottom" constant="40" id="KaF-b4-iDJ"/>
                             <constraint firstItem="vPV-0b-CLI" firstAttribute="centerX" secondItem="ets-ss-u1a" secondAttribute="centerX" id="OWO-6Y-iq4"/>
+                            <constraint firstItem="9gD-D0-nFq" firstAttribute="leading" secondItem="7VF-5h-l06" secondAttribute="leading" constant="10" id="Og7-38-POd"/>
                             <constraint firstItem="7VF-5h-l06" firstAttribute="bottom" secondItem="qH3-hO-jb9" secondAttribute="bottom" id="PDp-Ij-pX3"/>
                             <constraint firstItem="qH3-hO-jb9" firstAttribute="leading" secondItem="7VF-5h-l06" secondAttribute="leading" id="R1f-wZ-oys"/>
+                            <constraint firstItem="7VF-5h-l06" firstAttribute="trailing" secondItem="wFb-hO-pCu" secondAttribute="trailing" constant="10" id="TAN-NA-1Ee"/>
                             <constraint firstItem="7VF-5h-l06" firstAttribute="trailing" secondItem="qH3-hO-jb9" secondAttribute="trailing" id="cHX-7I-x1M"/>
-                            <constraint firstItem="MPl-j2-3aS" firstAttribute="leading" secondItem="7VF-5h-l06" secondAttribute="leading" constant="10" id="dYT-E3-rNA"/>
-                            <constraint firstItem="MPl-j2-3aS" firstAttribute="top" secondItem="wFb-hO-pCu" secondAttribute="bottom" constant="1" id="dek-U3-JAt"/>
-                            <constraint firstItem="wFb-hO-pCu" firstAttribute="leading" secondItem="7VF-5h-l06" secondAttribute="leading" constant="10" id="ieI-6j-Dgu"/>
-                            <constraint firstItem="7VF-5h-l06" firstAttribute="trailing" secondItem="wFb-hO-pCu" secondAttribute="trailing" constant="10" id="lgA-Fy-8Ty"/>
+                            <constraint firstItem="wFb-hO-pCu" firstAttribute="leading" secondItem="7VF-5h-l06" secondAttribute="leading" constant="10" id="kJK-If-Vg7"/>
+                            <constraint firstItem="wFb-hO-pCu" firstAttribute="centerX" secondItem="ets-ss-u1a" secondAttribute="centerX" id="pXF-AU-93D"/>
+                            <constraint firstItem="9gD-D0-nFq" firstAttribute="top" secondItem="wFb-hO-pCu" secondAttribute="bottom" constant="10" id="qRo-nb-fyh"/>
                             <constraint firstItem="qH3-hO-jb9" firstAttribute="top" secondItem="ets-ss-u1a" secondAttribute="top" id="qsr-b6-S2b"/>
+                            <constraint firstItem="wFb-hO-pCu" firstAttribute="centerY" secondItem="ets-ss-u1a" secondAttribute="centerY" id="s6m-f2-pzI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7VF-5h-l06"/>
                     </view>
