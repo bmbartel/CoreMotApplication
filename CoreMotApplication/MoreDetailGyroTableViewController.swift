@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 // This view controller will display acceleration(x,y,z) or gyro(roll,pitch,yaw) depending on what the user has navigated to. In this controller, moving forward for the final project, we could attempt to make plots. Potentially change this to a split view controller. And could perform data manipulation to try to estimate distance from acceleration values.
 
@@ -20,6 +21,24 @@ class MoreDetailGyroTableViewController: UITableViewController {
     @IBAction func GoBack(_ sender: Any) {
         performSegue(withIdentifier: "UnwindToGyro", sender: self)
     }
+    
+    @IBAction func saveButton(_ sender: Any) {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let newSession = NSEntityDescription.insertNewObject(forEntityName: "Data", into: context)
+        
+        //newSession.setValue(input.text!, forKey: "name")
+        newSession.setValue(Values, forKey: "data")
+        
+        do {
+            try context.save()
+        } catch {
+            print("failed to save")
+        }
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

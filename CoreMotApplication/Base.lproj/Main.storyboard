@@ -1054,6 +1054,11 @@
                                 <segue destination="E6l-xT-6kE" kind="unwind" identifier="UnwindToGyro" unwindAction="unwindToGyroWithSegue:" id="E5F-HX-3XZ"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="voX-E2-hRp">
+                            <connections>
+                                <action selector="saveButton:" destination="SvF-Js-zvg" id="vBA-CY-R3C"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
