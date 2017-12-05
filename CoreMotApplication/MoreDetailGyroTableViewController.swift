@@ -18,8 +18,6 @@ class MoreDetailGyroTableViewController: UITableViewController {
     var sensorType = ""
     var buttonSelected = ""
     var valuesToSend = [0.0]
-    var nameValue = 0.0
-    var nameValuesToSend: [Double] = []
     var conditional = false
     
     
@@ -28,37 +26,49 @@ class MoreDetailGyroTableViewController: UITableViewController {
     }
     
    
-
+    
     @IBAction func saveButton(_ sender: Any) {
-        if (conditional == false)
-        {
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        // print(Variables.nameValuesToSend)
+        if conditional == false {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         let newSession = NSEntityDescription.insertNewObject(forEntityName: "Data", into: context)
+        let newFinalSession = NSEntityDescription.insertNewObject(forEntityName: "AllData", into: context)
         
         
-        valuesToSend = Values
-        nameValuesToSend.insert(nameValue, at: 0)
-        newSession.setValue(valuesToSend, forKey: "data")
-        newSession.setValue(nameValuesToSend, forKey: "name")
-        nameValue = nameValue + 1
-        
-        do {
-            try context.save()
-        } catch {
-            print("failed to save")
-        }
+            
+            //Variables.nameValue = Variables.nameValue + 1
+            
+            Variables.nameValuesToSend.insert(Variables.nameValue, at: 0)
+            Variables.finalValues.insert(Values, at: 0)
+            
+            
+            
+            newSession.setValue(Values, forKey: "data")
+            newSession.setValue(Variables.nameValuesToSend, forKey: "name")
+            newFinalSession.setValue(Variables.finalValues, forKey: "allData")
+            Variables.nameValue = Variables.nameValue + 1
+            
+            do {
+                try context.save()
+            } catch {
+                print("failed to save")
+            }
+            
             conditional = true
+            
     }
-        else
-        {
-            print("Only want one save")
-        }
+    else {
+        print("You suck")
     }
+    
+    }
+            
+    
 
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        // super.viewDidLoad()
         
         // Maybe conditionally add a button: If the acceleration values are the values being looked at, add a button entitled (Estimate Distance). Then this button will Segue to another view which will plot and display the distance estimates (Split View Controller). Add this button as soon as the program loads. And set-up a performsegue function for this button.
         navigationItem.title = buttonSelected
