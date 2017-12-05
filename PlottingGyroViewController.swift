@@ -70,7 +70,9 @@ class PlottingGyroViewController: UIViewController, JBLineChartViewDelegate, JBL
         GyroLine.minimumValue = CGFloat(Int(Values.min()!))
         GyroLine.maximumValue = CGFloat(Int(Values.max()!+15))
         
+        // Collapse what was there before, now show what is there currently.
         GyroLine.setState(.collapsed, animated: false)
+        GyroLine.setState(.expanded, animated: true)
     }
 
     @IBAction func grayChosen(_ sender: UIButton) {
@@ -99,10 +101,11 @@ class PlottingGyroViewController: UIViewController, JBLineChartViewDelegate, JBL
         super.viewDidAppear(animated)
         
         GyroLine.reloadData()
-        GyroLine.setState(.expanded, animated: true)
+
         
     }
-    
+
+
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidAppear(animated)
         GyroLine.setState(.collapsed, animated: true)
